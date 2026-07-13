@@ -326,9 +326,6 @@ Complete the Ubuntu profile using the following required values:
 
    - Save a screenshot of the completed profile page as `ubuntu_profile_setup.png`.
 
-### Instructional reference
-
-![Ubuntu Server profile setup](images/install-ubuntu-server/22deb8bda1b7df8dc94a19f6a23bb07c5b7664b0.png)
 
 ## Task 14: Complete the Software Installation
 
@@ -393,11 +390,9 @@ Complete the Ubuntu profile using the following required values:
 
 1. Keep the Ubuntu Server virtual machine powered on.
 
-   - Save a screenshot showing the running virtual machine as `ubuntu_vm_running.png`.
 
 2. Open Command Prompt or PowerShell on Windows.
 
-   - Save a screenshot showing the Windows terminal as `windows_terminal.png`.
 
 3. Run the following SSH command, replacing the placeholders with your Ubuntu username and server IP address:
 
@@ -429,10 +424,6 @@ sudo apt install -y openssh-server
 sudo systemctl enable --now ssh
 ```
 
-If you use these commands:
-
-- Save a screenshot showing the OpenSSH installation as `openssh_installation.png`.
-- Save a screenshot showing the active SSH service as `openssh_service.png`.
 
 ## Task 18: Prepare Lab1 Solution PDF
 
@@ -449,7 +440,7 @@ If you use these commands:
 
 2. Add headings for Tasks 1 through 17.
 
-3. Under each heading, insert the screenshots for that task in the same order used in this README.
+3. Under each heading, insert the screenshots for that task in the same order used in this README.md file.
 
 4. Add a short caption below every screenshot explaining what it demonstrates.
 
