@@ -110,7 +110,7 @@ Follow these rules:
 
 ## Task 2: Register in the Student Marks Portal
 
-1. Open the [Student Marks Portal](https://studentsreportcard-809ae.web.app/).
+1. Open the [Student Marks Portal](https://reportcard.qd.je/).
 
    - Save a screenshot of the portal login page as `portal_login_page.png`.
 
