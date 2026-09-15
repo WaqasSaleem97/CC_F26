@@ -160,9 +160,9 @@ Each of these 41 checks has equal weight. Bonus and additional exam-practice scr
    - Save it as `Labs/Lab02/screenshots/ssh_keygen.png`. Do not show the private key contents.
 2. **Add your SSH public key to GitHub (Settings > SSH and GPG keys).**
    - Save a split-screen screenshot as `Labs/Lab02/screenshots/github_sshkey.png`.
-3. **Clone your `CC` repository using SSH.**
+3. **Clone your `CC_Lab2_Practice` repository using SSH.**
    ```bash
-   git clone git@github.com:<yourusername>/CC.git
+   git clone git@github.com:<yourusername>/CC_Lab2_Practice.git
    ```
    - Save it as `Labs/Lab02/screenshots/ssh_clone.png`.
 
