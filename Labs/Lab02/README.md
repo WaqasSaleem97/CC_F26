@@ -86,7 +86,7 @@ Read these rules before starting. The automated grader awards marks separately f
 
 ### Required Automated-Grading Filenames
 
-The current Lab 2 grader checks these 38 files:
+The current Lab 2 grader checks these 37 files:
 
 ```text
 git_installation.png
@@ -118,7 +118,6 @@ branch_merges.png
 final_merge.png
 pr_create_details.png
 pr_assigned_reviewer.png
-pr_approved.png
 pr_request_changes.png
 pr_rejected.png
 pr_updated_with_commits.png
@@ -129,7 +128,7 @@ remote_branch_deleted.png
 remote_branch_delete_cmd.png
 ```
 
-Each of these 38 checks has equal weight. Bonus and additional exam-practice screenshots may be reviewed separately and are not included in these 38 automated checks.
+Each of these 37 checks has equal weight. Bonus and additional exam-practice screenshots may be reviewed separately and are not included in these 37 automated checks.
 
 ---
 
@@ -343,7 +342,6 @@ Each of these 38 checks has equal weight. Bonus and additional exam-practice scr
    - Screenshot as `pr_assigned_reviewer.png`.
 
 3. **Reviewer Actions (capture screenshots for each):**
-   - Approve the PR → `pr_approved.png`
    - Request changes and add comments → `pr_request_changes.png`
    - Reject or close a practice PR → `pr_rejected.png`. Use a separate practice PR if necessary so all required review states can be demonstrated safely.
 
@@ -404,7 +402,7 @@ Each of these 38 checks has equal weight. Bonus and additional exam-practice scr
 
 6. Save the merge evidence as `collab_merge.png`.
 
-The bonus screenshots are not included in the 38 mandatory automated checks.
+The bonus screenshots are not included in the 37 mandatory automated checks.
 
 ---
 
@@ -462,7 +460,7 @@ Before the deadline, verify the following:
 - Every required screenshot is stored under `Labs/Lab02/screenshots`.
 - Screenshot filenames match the required names exactly.
 - Every required screenshot clearly shows your standardized terminal identity, task evidence, and relevant output.
-- `README.md` contains your name, registration number, GitHub username, course, and section.
+- `README.md` this file.
 - No password, private key, token, or secret is visible.
 - All files are committed and pushed to GitHub.
 
