@@ -86,7 +86,7 @@ Read these rules before starting. The automated grader awards marks separately f
 
 ### Required Automated-Grading Filenames
 
-The current Lab 2 grader checks these 41 files:
+The current Lab 2 grader checks these 38 files:
 
 ```text
 git_installation.png
@@ -127,12 +127,9 @@ pr_merged.png
 pr_branch_deleted.png
 remote_branch_deleted.png
 remote_branch_delete_cmd.png
-Q1_branch_created.png
-Q1_commit_done.png
-Q1_merge_done.png
 ```
 
-Each of these 41 checks has equal weight. Bonus and additional exam-practice screenshots may be reviewed separately and are not included in these 41 automated checks.
+Each of these 38 checks has equal weight. Bonus and additional exam-practice screenshots may be reviewed separately and are not included in these 38 automated checks.
 
 ---
 
