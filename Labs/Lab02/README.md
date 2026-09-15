@@ -15,6 +15,7 @@ CC/
         ├── notes.txt
         ├── main.py
         ├── REVIEW_NOTES.md
+        ├── Lab1_Solution.pdf
         └── screenshots/
             ├── git_installation.png
             ├── repo_private.png
@@ -145,7 +146,7 @@ Each of these 41 checks has equal weight. Bonus and additional exam-practice scr
 
 ## Task 1: Create Private GitHub Repository
 
-1. **Create a new private repository named exactly `CC` on GitHub.**
+1. **Create a new private repository named exactly `CC_Lab2_Practice` on GitHub.**
 2. Take a split-screen screenshot showing the repository is private and your required terminal prompt. Save it as `Labs/Lab02/screenshots/repo_private.png`.
 
 ---
