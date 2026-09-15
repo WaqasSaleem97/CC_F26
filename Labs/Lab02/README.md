@@ -284,12 +284,15 @@ Each of these 41 checks has equal weight. Bonus and additional exam-practice scr
    git commit -m "Add new function to main.py"
    ```
    - Screenshot as `feature_commit.png`.
-3. Switch back to `main` and merge:
+3. Switch back to `main` and merge: 
    ```bash
    git checkout main
    git merge feature-1
    ```
    - Screenshot as `merge.png`.
+
+    Merging directly into `main` from your local terminal is **widely considered a risky anti-pattern**, especially on a team. In professional software development, using a **Pull Request (PR)** or **Merge Request (MR)** is the **gold standard**.
+
 4. Push all branches:
    ```bash
    git push origin main
