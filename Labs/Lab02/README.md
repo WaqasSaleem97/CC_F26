@@ -404,7 +404,7 @@ Each of these 38 checks has equal weight. Bonus and additional exam-practice scr
 
 6. Save the merge evidence as `collab_merge.png`.
 
-The bonus screenshots are not included in the 41 mandatory automated checks.
+The bonus screenshots are not included in the 38 mandatory automated checks.
 
 ---
 
