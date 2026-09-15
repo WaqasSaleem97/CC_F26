@@ -220,7 +220,7 @@ Each of these 41 checks has equal weight. Bonus and additional exam-practice scr
    - Save a screenshot as `first_commit.png`.
 4. **Connect your local repo to GitHub and push:**
    ```bash
-   git remote add origin git@github.com:<yourusername>/CC.git
+   git remote add origin git@github.com:<yourusername>/CC_Lab2_Practice.git
    git push -u origin main
    ```
    - Save a screenshot as `first_push.png`.
