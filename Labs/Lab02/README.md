@@ -152,6 +152,7 @@ Each of these 37 checks has equal weight. Bonus and additional exam-practice scr
 1. **Generate a new SSH key using PowerShell:**
    ```powershell
    ssh-keygen -t ed25519 -C "your_email@example.com"
+   cat ~/.ssh/id_ed25519.pub
    ```
    - Save it as `Labs/Lab02/screenshots/ssh_keygen.png`. Do not show the private key contents.
 2. **Add your SSH public key to GitHub (Settings > SSH and GPG keys).**
@@ -209,6 +210,7 @@ Each of these 37 checks has equal weight. Bonus and additional exam-practice scr
    - Save a screenshot as `git_init.png`.
 3. **Add a file named `README.md` and commit it:**
    ```bash
+   touch README.md
    echo "# Lab02 Git Practice" > README.md
    git add README.md
    git commit -m "Initial commit"
@@ -217,6 +219,7 @@ Each of these 37 checks has equal weight. Bonus and additional exam-practice scr
 4. **Connect your local repo to GitHub and push:**
    ```bash
    git remote add origin git@github.com:<yourusername>/CC_Lab2_Practice.git
+   git branch -M main
    git push -u origin main
    ```
    - Save a screenshot as `first_push.png`.
@@ -233,6 +236,7 @@ Each of these 37 checks has equal weight. Bonus and additional exam-practice scr
    - Screenshot as `status1.png`.
 3. Stage and commit:
    ```bash
+   touch notes.txt
    git add notes.txt
    git commit -m "Add notes.txt"
    ```
