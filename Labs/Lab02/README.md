@@ -211,8 +211,7 @@ Each of these 37 checks has equal weight. Bonus and additional exam-practice scr
    - Save a screenshot as `git_init.png`.
 3. **Add a file named `README.md` and commit it:**
    ```bash
-   touch README.md
-   echo "# Lab02 Git Practice" > README.md
+   echo "# Lab02 Git Practice" >> README.md
    git add README.md
    git commit -m "Initial commit"
    ```
@@ -230,6 +229,9 @@ Each of these 37 checks has equal weight. Bonus and additional exam-practice scr
 ## Task 6: File Status & Staging
 
 1. Create a new file `notes.txt` and write a note.
+   ```bash
+   echo "Adding some test notes" >> notes.txt
+   ```
 2. Check status:
    ```bash
    git status
@@ -237,7 +239,6 @@ Each of these 37 checks has equal weight. Bonus and additional exam-practice scr
    - Screenshot as `status1.png`.
 3. Stage and commit:
    ```bash
-   touch notes.txt
    git add notes.txt
    git commit -m "Add notes.txt"
    ```
