@@ -201,6 +201,7 @@ Each of these 37 checks has equal weight. Bonus and additional exam-practice scr
 1. **Delete the existing `.git` folder from your cloned repo using Git Bash:**
    ```bash
    rm -rf .git
+   git status ==> error why?
    ```
    - Take a screenshot as `delete_git.png`.
 2. **Re-initialize the local git repository:**
