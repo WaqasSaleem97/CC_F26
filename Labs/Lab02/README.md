@@ -14,8 +14,7 @@ CC/
         ├── README.md
         ├── notes.txt
         ├── main.py
-        ├── REVIEW_NOTES.md
-        ├── Lab1_Solution.pdf
+        ├── Lab2_Solution.pdf
         └── screenshots/
             ├── git_installation.png
             ├── repo_private.png
