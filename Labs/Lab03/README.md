@@ -19,6 +19,7 @@ CC/
             ├── remote_edit.png
             ├── local_commit.png
             └── ...
+```
 ---
 
 ## 🎯 Objective
@@ -40,7 +41,7 @@ By the end of this lab, you will be able to:
 ## 🧩 Prerequisites
 - A working Git repository (can be your previous lab repo or a new one)
 - Visual Studio Code (or any text editor)
-- Git Bash or terminal access
+- Git installed Ubuntu server
 - An active GitHub repository connected via SSH
 
 ---
