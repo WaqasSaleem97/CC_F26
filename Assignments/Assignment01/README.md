@@ -94,7 +94,7 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
    <github-username>@ubuntu:~$
    ```
 
-3. Confirm that Git, Git LFS, Docker, and Docker Compose are installed on the Ubuntu server.
+3. Confirm that Git and Git LFS are installed on the Ubuntu server. Docker and Docker Compose will be installed in Task 1.
 
 4. Read all four tasks before beginning the assignment.
 
@@ -112,7 +112,28 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
 ### Step 1.1: Install and Run Gitea on the Ubuntu Server
 
 1. Connect to your assigned Ubuntu server.
-2. Confirm that Git, Docker, and Docker Compose are available:
+2. Update the Ubuntu package index and install Docker Engine and `curl`. On Ubuntu, the required package name is `docker.io`:
+
+   ```bash
+   sudo apt update -y
+   sudo apt install -y docker.io curl
+   ```
+
+3. Create the system-wide Docker CLI plug-in directory and download the Docker Compose plug-in for an `x86_64` Ubuntu server:
+
+   ```bash
+   sudo mkdir -p /usr/local/lib/docker/cli-plugins
+   sudo curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+   sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+   ```
+
+4. Start the Docker service:
+
+   ```bash
+   sudo systemctl start docker
+   ```
+
+5. Verify the Git, Docker, and Docker Compose installations:
 
    ```bash
    git --version
@@ -120,7 +141,9 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
    docker compose version
    ```
 
-3. Clone the instructor-provided Gitea setup repository on the Ubuntu server:
+   Do not continue until all three commands display their installed versions.
+
+6. Clone the instructor-provided Gitea setup repository on the Ubuntu server:
 
    ```bash
    cd ~
@@ -128,37 +151,37 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
    cd Gitea
    ```
 
-4. Use the existing `compose.yaml` without changing its server URL or port settings. Start Gitea and PostgreSQL:
+7. Use the existing `compose.yaml` without changing its server URL or port settings. Start Gitea and PostgreSQL:
 
    ```bash
-   docker compose up -d
+   sudo docker compose up -d
    ```
 
-5. Confirm that both containers are running:
+8. Confirm that both containers are running:
 
    ```bash
-   docker compose ps
+   sudo docker compose ps
    ```
 
-6. Confirm that Gitea responds locally on port `3000`:
+9. Confirm that Gitea responds locally on port `3000`:
 
    ```bash
    curl -sS -o /dev/null -w "Gitea HTTP status: %{http_code}\n" http://127.0.0.1:3000/
    ```
 
-7. Display the Ubuntu server's IP address:
+10. Display the Ubuntu server's IP address:
 
    ```bash
    hostname -I
    ```
 
-8. Open Gitea in a web browser using the server address provided for your lab:
+11. Open Gitea in a web browser using the server address provided for your lab:
 
    ```text
    http://<ubuntu-server-ip>:3000/
    ```
 
-9. On the initial Gitea installation page, use these database settings:
+12. On the initial Gitea installation page, use these database settings:
 
    | Setting | Required value |
    | --- | --- |
@@ -170,9 +193,9 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
    | Server domain | `<ubuntu-server-ip>` |
    | Gitea base URL | `http://<ubuntu-server-ip>:3000/` |
 
-10. Create your Gitea administrator account and complete the installation. Do not show any password or token in a screenshot.
+13. Create your Gitea administrator account and complete the installation. Do not show any password or token in a screenshot.
 
-The screenshot must show your `<github-username>@ubuntu` prompt, the `docker compose ps` command, both Gitea and PostgreSQL running, and the successful Gitea HTTP status.
+The screenshot must show your `<github-username>@ubuntu` prompt, the `sudo docker compose ps` command, both Gitea and PostgreSQL running, and the successful Gitea HTTP status.
 
 📸 **Screenshot required immediately after this step:** Save it as `task1_gitea_running.png`.
 
