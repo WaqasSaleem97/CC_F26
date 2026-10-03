@@ -58,7 +58,7 @@ Use the following environment for each type of work:
 | Use Gitea and GitHub web pages | Web browser |
 | Store assignment evidence | Existing GitHub repository named `CC` |
 
-Complete the Gitea installation and all Git terminal work for Tasks 1, 2, and 3 on your Ubuntu server. Use the existing `compose.yaml` supplied in the instructor's Gitea repository; do not replace it with a Codespaces-specific configuration.
+Complete the Gitea installation and all Git terminal work for Tasks 1, 2, and 3 on your Ubuntu server. Use the existing `compose.yaml` supplied in the instructor's Gitea repository without changing its server settings.
 
 Your Ubuntu terminal prompt must show your registered GitHub username and the hostname `ubuntu`:
 
@@ -128,7 +128,7 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
    cd Gitea
    ```
 
-4. Use the existing `compose.yaml` without replacing it with a Codespaces-specific file. Start Gitea and PostgreSQL:
+4. Use the existing `compose.yaml` without changing its server URL or port settings. Start Gitea and PostgreSQL:
 
    ```bash
    docker compose up -d
