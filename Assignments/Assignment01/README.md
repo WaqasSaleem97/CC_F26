@@ -36,11 +36,11 @@ CC/
 
 ## Assignment Objective
 
-In this assignment, you will run a Gitea service in GitHub Codespaces, use Git from your Ubuntu server, push the same repository to Gitea and GitHub, manage large files with Git LFS, and publish a portfolio or CV with GitHub Pages.
+In this assignment, you will install and run Gitea on your Ubuntu server, create and manage a Git repository from the same server, push that repository to Gitea and GitHub, manage large files with Git LFS, and publish a portfolio or CV with GitHub Pages.
 
 By the end of this assignment, you will be able to:
 
-- Run and access a Gitea service in GitHub Codespaces.
+- Install, run, and access a Gitea service on an Ubuntu server.
 - Create and manage a Git repository from an Ubuntu server.
 - Work with multiple Git remotes.
 - Authenticate safely without exposing credentials.
@@ -53,12 +53,12 @@ Use the following environment for each type of work:
 
 | Work | Required environment |
 | --- | --- |
-| Run the Gitea service | GitHub Codespaces |
+| Install and run the Gitea service | Ubuntu server |
 | Perform Git terminal work for Tasks 1, 2, and 3 | Ubuntu server |
 | Use Gitea and GitHub web pages | Web browser |
 | Store assignment evidence | Existing GitHub repository named `CC` |
 
-Do not create or push the Task 1 repository from the Codespaces terminal. GitHub Codespaces is used only to run Gitea. All Git commands for Tasks 1, 2, and 3 must be completed on your Ubuntu server.
+Complete the Gitea installation and all Git terminal work for Tasks 1, 2, and 3 on your Ubuntu server. Use the existing `compose.yaml` supplied in the instructor's Gitea repository; do not replace it with a Codespaces-specific configuration.
 
 Your Ubuntu terminal prompt must show your registered GitHub username and the hostname `ubuntu`:
 
@@ -71,7 +71,7 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
 ## Task List
 
 - [Getting Started](#getting-started)
-- [Task 1: Run Gitea in Codespaces and Push from the Ubuntu Server](#task-1-run-gitea-in-codespaces-and-push-from-the-ubuntu-server)
+- [Task 1: Install Gitea and Push a Repository from the Ubuntu Server](#task-1-install-gitea-and-push-a-repository-from-the-ubuntu-server)
 - [Task 2: Push the Same Repository to GitHub](#task-2-push-the-same-repository-to-github)
 - [Task 3: Track Three Large Files with Git LFS](#task-3-track-three-large-files-with-git-lfs)
 - [Task 4: Create a Portfolio or CV with GitHub Pages](#task-4-create-a-portfolio-or-cv-with-github-pages)
@@ -94,7 +94,7 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
    <github-username>@ubuntu:~$
    ```
 
-3. Confirm that Git and Git LFS are installed on the Ubuntu server.
+3. Confirm that Git, Git LFS, Docker, and Docker Compose are installed on the Ubuntu server.
 
 4. Read all four tasks before beginning the assignment.
 
@@ -107,21 +107,72 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
 
 ---
 
-## Task 1: Run Gitea in Codespaces and Push from the Ubuntu Server
+## Task 1: Install Gitea and Push a Repository from the Ubuntu Server
 
-### Step 1.1: Run Gitea in GitHub Codespaces
+### Step 1.1: Install and Run Gitea on the Ubuntu Server
 
-1. Run a Gitea server inside your GitHub Codespace.
-2. Forward port `3000`.
-3. Temporarily change the port visibility to **Public** so that your Ubuntu server can reach the Gitea HTTPS URL.
-4. Keep the Codespace and Gitea service running while completing Task 1.
-5. Open Gitea in the browser and confirm that the public URL uses this format:
+1. Connect to your assigned Ubuntu server.
+2. Confirm that Git, Docker, and Docker Compose are available:
 
-   ```text
-   https://<codespace-name>-3000.app.github.dev
+   ```bash
+   git --version
+   docker --version
+   docker compose version
    ```
 
-The browser must show the Gitea interface and either the forwarded Codespaces URL or port `3000`. A normal Gitea page such as **Sign In**, **Register**, **Dashboard**, **Explore**, or **Repositories** must be visible.
+3. Clone the instructor-provided Gitea setup repository on the Ubuntu server:
+
+   ```bash
+   cd ~
+   git clone https://github.com/WaqasSaleem97/Gitea.git
+   cd Gitea
+   ```
+
+4. Use the existing `compose.yaml` without replacing it with a Codespaces-specific file. Start Gitea and PostgreSQL:
+
+   ```bash
+   docker compose up -d
+   ```
+
+5. Confirm that both containers are running:
+
+   ```bash
+   docker compose ps
+   ```
+
+6. Confirm that Gitea responds locally on port `3000`:
+
+   ```bash
+   curl -sS -o /dev/null -w "Gitea HTTP status: %{http_code}\n" http://127.0.0.1:3000/
+   ```
+
+7. Display the Ubuntu server's IP address:
+
+   ```bash
+   hostname -I
+   ```
+
+8. Open Gitea in a web browser using the server address provided for your lab:
+
+   ```text
+   http://<ubuntu-server-ip>:3000/
+   ```
+
+9. On the initial Gitea installation page, use these database settings:
+
+   | Setting | Required value |
+   | --- | --- |
+   | Database type | PostgreSQL |
+   | Database host | `db:5432` |
+   | Database username | `gitea` |
+   | Database password | `gitea` |
+   | Database name | `gitea` |
+   | Server domain | `<ubuntu-server-ip>` |
+   | Gitea base URL | `http://<ubuntu-server-ip>:3000/` |
+
+10. Create your Gitea administrator account and complete the installation. Do not show any password or token in a screenshot.
+
+The screenshot must show your `<github-username>@ubuntu` prompt, the `docker compose ps` command, both Gitea and PostgreSQL running, and the successful Gitea HTTP status.
 
 📸 **Screenshot required immediately after this step:** Save it as `task1_gitea_running.png`.
 
@@ -129,7 +180,7 @@ The browser must show the Gitea interface and either the forwarded Codespaces UR
 
 1. In Gitea, create an **empty public repository** named exactly `Assignment01`.
 2. Do not initialize it with a README, `.gitignore`, or license.
-3. Connect to your Ubuntu server and create a separate local repository outside the existing `CC` repository:
+3. On the same Ubuntu server, create a separate local repository outside both the `Gitea` directory and the existing `CC` repository:
 
    ```bash
    cd ~
@@ -154,36 +205,42 @@ The browser must show the Gitea interface and either the forwarded Codespaces UR
    - Open **Applications** and then **Manage Access Tokens**.
    - Use `ubuntu-server-token` as the token name.
    - Give the token read-and-write repository permission (`write:repository`).
-   - Copy the token when it is displayed. Do not place it in a screenshot.
-7. On the Ubuntu server, add the public Codespaces Gitea repository URL as the `gitea` remote. Do not include your username, password, or token in the URL:
+   - Copy the generated token. Do not place it in a command, remote URL, or screenshot.
+7. Because Gitea and Git are running on the same Ubuntu server, add the local Gitea address as the `gitea` remote:
 
    ```bash
-   git remote add gitea https://<codespace-name>-3000.app.github.dev/<gitea-username>/Assignment01.git
+   git remote add gitea http://127.0.0.1:3000/<gitea-username>/Assignment01.git
    ```
 
-8. Push the initial commit:
+8. Verify that the remote URL does not contain a password or token:
+
+   ```bash
+   git remote -v
+   ```
+
+9. Push the initial commit:
 
    ```bash
    git push -u gitea main
    ```
 
-9. If Git requests authentication, enter your Gitea username and use the token as the password. Password and token input is hidden in the terminal.
+10. If Git requests authentication, enter your Gitea username and use the personal access token as the password. Password and token input is hidden in the terminal.
 
-The terminal must show the `git push` command, the `gitea` remote, a successful result, and your `<github-username>@ubuntu` prompt. The token must not be visible.
+The terminal must show the `git push` command, the `gitea` remote, a successful push, and your `<github-username>@ubuntu` prompt. The token must not be visible.
 
 📸 **Screenshot required immediately after this step:** Save it as `task1_gitea_push.png`.
 
 ### Step 1.3: Verify the Gitea Repository
 
 1. Open the `Assignment01` repository in Gitea.
-2. Confirm that the repository name is visible.
-3. Confirm that the rendered `README.md` shows your full name and registration number.
+2. Confirm that the repository owner and repository name are visible.
+3. Confirm that the repository is public.
+4. Confirm that the rendered `README.md` shows your full name and registration number.
+5. Keep the Gitea URL visible in the browser.
 
 📸 **Screenshot required immediately after this step:** Save it as `task1_gitea_repository.png`.
 
-After capturing the screenshot, change port `3000` back to **Private** or stop the Codespace. Do not leave the forwarded port public after completing Task 1.
-
-**Task 1 result:** You ran Gitea in Codespaces, created a repository locally on the Ubuntu server, and pushed the repository to Gitea through HTTPS.
+**Task 1 result:** You installed and ran Gitea on your Ubuntu server, created a separate local repository on that server, and pushed it to Gitea using HTTP over the server's local loopback interface.
 
 ---
 
@@ -368,7 +425,7 @@ Confirm that the site loads successfully. Keep the complete `github.io` URL and 
 
 In this assignment, you:
 
-- ran a Gitea service in GitHub Codespaces;
+- installed and ran a Gitea service on an Ubuntu server;
 - performed Git work from an Ubuntu server with your GitHub identity visible;
 - pushed the same local repository to Gitea and GitHub using two remotes;
 - configured Git LFS and pushed three large files; and
@@ -411,5 +468,5 @@ Marks are awarded for completing and demonstrating the required process, not onl
 - [About large files on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
 - [Git Large File Storage](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage)
 - [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
-- [Forwarding and sharing ports in GitHub Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace)
+- [Installing Gitea with Docker](https://docs.gitea.com/installation/install-with-docker/)
 - [Gitea API tokens and repository permissions](https://docs.gitea.com/1.26/development/api-usage)
