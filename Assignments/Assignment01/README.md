@@ -234,13 +234,15 @@ The screenshot must show your `<github-username>@ubuntu` prompt, the `docker com
    - Use `ubuntu-server-token` as the token name.
    - Give the token read-and-write repository permission (`write:repository`).
    - Copy the generated token. Do not place it in a command, remote URL, or screenshot.
-7. Because Gitea and Git are running on the same Ubuntu server, add the local Gitea address as the `gitea` remote:
+7. Because Gitea and Git are running on the same Ubuntu server, add the local Gitea address as the `gitea` remote. Include your Gitea username, but do not include the personal access token:
 
    ```bash
-   git remote add gitea http://127.0.0.1:3000/<gitea-username>/Assignment01.git
+   git remote add gitea http://<gitea-username>@127.0.0.1:3000/<gitea-username>/Assignment01.git
    ```
 
-8. Verify that the remote URL does not contain a password or token:
+   The `git remote add` command only records the repository address; it does not contact Gitea or perform authentication.
+
+8. Verify that the remote URL contains your username but does not contain a password or token:
 
    ```bash
    git remote -v
@@ -252,7 +254,15 @@ The screenshot must show your `<github-username>@ubuntu` prompt, the `docker com
    git push -u gitea main
    ```
 
-10. If Git requests authentication, enter your Gitea username and use the personal access token as the password. Password and token input is hidden in the terminal.
+10. When Git displays the password prompt, paste the Gitea personal access token and press **Enter**:
+
+   ```text
+   Password for 'http://<gitea-username>@127.0.0.1:3000':
+   ```
+
+   The token is used as the password for this HTTP Git operation. Nothing will appear while the token is being pasted or typed; this is normal.
+
+   **Never use a URL such as `http://username:token@127.0.0.1:3000/...`.** Embedding the token would save it in shell history and `.git/config`, and it would be displayed by `git remote -v`.
 
 The terminal must show the `git push` command, the `gitea` remote, a successful push, and your `<github-username>@ubuntu` prompt. The token must not be visible.
 
