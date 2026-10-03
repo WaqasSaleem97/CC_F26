@@ -132,6 +132,7 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
    ```bash
    sudo systemctl start docker
    sudo usermod -aG docker $USER
+   exit
    ```
 
    Completely sign out of the Ubuntu server and reconnect so that the new group membership takes effect. Opening only a new terminal tab is not sufficient.
@@ -139,6 +140,7 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
 5. Verify the Git, Docker, and Docker Compose installations:
 
    ```bash
+   ssh <github-username>@<ubuntu-server-ip>
    git --version
    docker --version
    docker compose version
@@ -175,7 +177,7 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
 10. Display the Ubuntu server's IP address:
 
    ```bash
-   hostname -I
+   ip addr
    ```
 
 11. Open Gitea in a web browser using the server address provided for your lab:
