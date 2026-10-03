@@ -127,11 +127,14 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
    sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
    ```
 
-4. Start the Docker service:
+4. Start the Docker service and add your current Ubuntu account to the `docker` group:
 
    ```bash
    sudo systemctl start docker
+   sudo usermod -aG docker $USER
    ```
+
+   Completely sign out of the Ubuntu server and reconnect so that the new group membership takes effect. Opening only a new terminal tab is not sufficient.
 
 5. Verify the Git, Docker, and Docker Compose installations:
 
@@ -154,13 +157,13 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
 7. Use the existing `compose.yaml` without changing its server URL or port settings. Start Gitea and PostgreSQL:
 
    ```bash
-   sudo docker compose up -d
+   docker compose up -d
    ```
 
 8. Confirm that both containers are running:
 
    ```bash
-   sudo docker compose ps
+   docker compose ps
    ```
 
 9. Confirm that Gitea responds locally on port `3000`:
@@ -195,7 +198,7 @@ The username comparison is case-insensitive. For example, `StudentName` on GitHu
 
 13. Create your Gitea administrator account and complete the installation. Do not show any password or token in a screenshot.
 
-The screenshot must show your `<github-username>@ubuntu` prompt, the `sudo docker compose ps` command, both Gitea and PostgreSQL running, and the successful Gitea HTTP status.
+The screenshot must show your `<github-username>@ubuntu` prompt, the `docker compose ps` command, both Gitea and PostgreSQL running, and the successful Gitea HTTP status.
 
 📸 **Screenshot required immediately after this step:** Save it as `task1_gitea_running.png`.
 
