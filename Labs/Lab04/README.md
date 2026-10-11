@@ -1,52 +1,116 @@
-# 🧪 Lab 4 – Virtualization & Linux Fundamentals
+# Lab 04: Virtualization and Linux Fundamentals
 
 **Estimated duration:** 3 hours  
 **Submission repository:** `CC`  
 **Submission directory:** `Labs/Lab04`  
 **Screenshot directory:** `Labs/Lab04/screenshots`
 
-Complete the practical work in the repository required by each task. Submit all evidence to your GitHub repository named exactly `CC` using the directory structure shown below.
----
+Complete the practical work using the Ubuntu Server virtual machine installed in Lab 01. Submit all evidence to your existing GitHub repository named exactly `CC`.
 
-## 🎯 Objective
-This lab guides hands‑on virtualization and core Linux fundamentals. You will work with the Ubuntu Server VM already installed in VMware Workstation (no new OS install required), inspect virtualization settings, explore the Linux filesystem, perform essential command-line tasks, collect system information, and manage users.
+## Lab Objective
 
-By the end of this lab you will be able to:
-- Inspect a VM's resources and networking settings in VMware Workstation  
-- Explore the Linux filesystem hierarchy and hidden (dot) files  
-- Use basic Linux CLI commands to navigate and manipulate files and directories  
-- Read system information (kernel, CPU, memory, disk) and list processes  
-- Create a non‑root user and verify its account existence  
-- Create and run a small shell script (Bonus)
+This lab provides hands-on practice with virtualization and core Linux fundamentals. You will inspect the Ubuntu Server virtual machine in VMware Workstation, connect to it through SSH, explore the Linux filesystem, perform essential command-line operations, collect system information, and manage a non-root user account.
 
----
+By the end of this lab, you will be able to:
 
-## 🧩 Prerequisites
-- You already have an Ubuntu Server VM installed in VMware Workstation from Lab 1 — use that VM for all tasks in this lab.  
-- Host machine: Windows (preferred for Task 2) / macOS / Linux with VMware Workstation available.  
-- SSH access to the VM from your host (Command Prompt / PowerShell / Terminal) — you will use the host's terminal to connect.  
-- A text editor inside VM (nano, vim, or other).  
-- Note: This course has not covered pipes (`|`) or redirection (`>`, `>>`), and you should not use them for this lab.
+- Inspect a virtual machine's resources and network configuration.
+- Connect to an Ubuntu Server virtual machine through SSH.
+- Explore the Linux filesystem hierarchy and hidden files.
+- Navigate directories and manage files from the command line.
+- Examine kernel, CPU, memory, disk, operating-system, and process information.
+- Create and verify a non-root user account.
+- Create and run a small shell script as an optional bonus activity.
 
----
-**Navigation:** Click any task below to jump to its instructions.
+## Prerequisites
 
-## 📋 Task List
+- The Ubuntu Server virtual machine installed in VMware Workstation during Lab 01.
+- SSH access to the virtual machine from the host computer.
+- A text editor inside the virtual machine, such as `nano` or `vim`.
+- Access to the existing GitHub repository named `CC`.
+- The Ubuntu username and hostname configured in Lab 01.
 
-- [Task 1: Verify VM resources in VMware](#task-1--verify-vm-resources-in-vmware)  
-- [Task 2: Start VM and log in (use your preferred host terminal method only)](#task-2--start-vm-and-log-in-use-your-preferred-host-terminal-method-only)  
-- [Task 3: Filesystem exploration — root tree and dotfiles](#task-3--filesystem-exploration--root-tree-and-dotfiles)  
-- [Task 4: Essential CLI tasks — navigation and file operations](#task-4--essential-cli-tasks--navigation-and-file-operations)    
-- [Task 5: System info, resources & processes](#task-5--system-info-resources--processes)  
-- [Task 6: Users and account verification (no sudo group change)](#task-6--users-and-account-verification-no-sudo-group-change)  
-- [Bonus Task 7: Create a small demo script using an editor and run it](#bonus-task-7--create-a-small-demo-script-using-an-editor-and-run-it)  
-- [Exam Evaluation Questions](#exam-evaluation-questions)  
-- [Summary](#summary)  
+Do not use pipes (`|`) or shell redirection (`>` and `>>`) because these topics have not yet been covered in the course.
+
+## Required Folder Structure
+
+Your completed Lab 04 directory must follow this structure:
+
+```text
+CC/
+└── Labs/
+    └── Lab04/
+        ├── README.md
+        ├── Lab4_Solution.pdf
+        ├── workspace/
+        │   ├── README.md
+        │   ├── main.py
+        │   ├── .env
+        │   └── run-demo.sh        # optional bonus file
+        └── screenshots/
+            ├── vm_settings.png
+            ├── whoami_pwd.png
+            ├── ls_root.png
+            └── ...
+```
+
+Keep every original evidence screenshot inside `Labs/Lab04/screenshots/`. The `workspace/` directory must contain the files created during Task 4. Include `run-demo.sh` only if you complete the bonus task.
+
+## Task List
+
+- [Screenshot Rules](#screenshot-rules)
+- [Getting Started](#getting-started)
+- [Task 1: Verify VM Resources in VMware](#task-1-verify-vm-resources-in-vmware)
+- [Task 2: Start the VM and Connect by SSH](#task-2-start-the-vm-and-connect-by-ssh)
+- [Task 3: Explore the Linux Filesystem and Hidden Files](#task-3-explore-the-linux-filesystem-and-hidden-files)
+- [Task 4: Practice Navigation and File Operations](#task-4-practice-navigation-and-file-operations)
+- [Task 5: Collect System and Process Information](#task-5-collect-system-and-process-information)
+- [Task 6: Create and Verify a Non-Root User](#task-6-create-and-verify-a-non-root-user)
+- [Bonus Task 7: Create and Run a Shell Script](#bonus-task-7-create-and-run-a-shell-script)
+- [Exam Evaluation Questions](#exam-evaluation-questions)
+- [Summary](#summary)
 - [Submission](#submission)
+- [Final Submission Checklist](#final-submission-checklist)
 
 ---
 
-## Task 1 – Verify VM resources in VMware
+## Screenshot Rules
+
+1. Save every screenshot inside `Labs/Lab04/screenshots/`.
+2. Use the exact filename and capitalization specified for each step.
+3. Every terminal screenshot must clearly show:
+   - your `<github-username>@ubuntu` prompt;
+   - the required command; and
+   - the relevant result or output.
+4. The GitHub username comparison is case-insensitive, but the spelling must match the username registered in the Student Marks Portal.
+5. GUI screenshots must clearly show the requested VMware setting or result.
+6. Screenshots must be clear, readable, and created from your own work.
+7. Do not crop out required identity, commands, filenames, or results.
+8. Do not expose passwords, private keys, access tokens, recovery codes, or other credentials.
+9. Do not copy, reuse, or modify another student's screenshots.
+10. Commit and push the complete `Labs/Lab04` directory before the deadline.
+
+Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
+
+## Getting Started
+
+1. From the root of your local `CC` repository, create the screenshot directory:
+
+   ```bash
+   mkdir -p Labs/Lab04/screenshots
+   ```
+
+2. Confirm that the Ubuntu Server virtual machine from Lab 01 starts successfully.
+3. Confirm that the Ubuntu terminal prompt follows this pattern:
+
+   ```text
+   <github-username>@ubuntu:~$
+   ```
+
+4. Read all required tasks and the exam evaluation questions before beginning.
+
+---
+
+## Task 1: Verify VM Resources in VMware
 
 Confirm the VM resources that were allocated in Lab 1.
 
@@ -60,7 +124,7 @@ Confirm the VM resources that were allocated in Lab 1.
 
 ---
 
-## Task 2 – Start VM and log in (use your preferred host terminal method only)
+## Task 2: Start the VM and Connect by SSH
 
 Use a single preferred host-terminal method to connect to the VM. Do not switch between methods during the task.
 
@@ -72,7 +136,7 @@ Use a single preferred host-terminal method to connect to the VM. Do not switch 
 ssh student@<vm-ip-address>
 ```
 
-- After connecting, save a screenshot of your host terminal showing the SSH login prompt/results as: `vm_login.png`
+- If `whoami_pwd.png` does not clearly show the successful SSH connection and remote prompt, also save the SSH login result as `vm_login.png`.
 
 3. After logging in, run both commands and capture them together in a single screenshot:
 
@@ -89,11 +153,11 @@ pwd
 
 ---
 
-## Task 3 – Filesystem exploration — root tree and dotfiles
+## Task 3: Explore the Linux Filesystem and Hidden Files
 
 Explore Linux filesystem layout and hidden files. Capture outputs using screenshots only (do not create text files). For the short explanation required in this task, write the paragraph in an editor and capture it as a screenshot (`answers_md.png`) — do not supply the `.md` file.
 
-### Steps (run inside VM terminal)
+### Steps
 1. List root directory contents:
 
 ```bash
@@ -178,11 +242,11 @@ nano ~/answers.md
 
 ---
 
-## Task 4 – Essential CLI tasks — navigation and file operations
+## Task 4: Practice Navigation and File Operations
 
 Practice basic commands used daily on Linux systems. Use screenshots only for evidence.
 
-### Steps (inside VM terminal)
+### Steps
 1. Create a workspace and navigate:
 
 ```bash
@@ -287,11 +351,11 @@ history
 
 ---
 
-## Task 5 – System info, resources & processes
+## Task 5: Collect System and Process Information
 
 Collect system information and observe processes. Use screenshots only.
 
-### Steps (inside VM terminal)
+### Steps
 1. Kernel and OS:
 
 ```bash
@@ -344,11 +408,11 @@ ps aux
 
 ---
 
-## Task 6 – Users and account verification (no sudo group change)
+## Task 6: Create and Verify a Non-Root User
 
 Create a non‑root user and verify the account exists. This task does NOT add the created user to the sudo group.
 
-### Steps (inside VM terminal)
+### Steps
 1. Create a new user named `lab4user`:
 
 ```bash
@@ -370,7 +434,7 @@ su - lab4user
 ```
 - Save screenshot as `su_lab4user.png`.
 
-4. From the new user you may attempt a sudo command to show that sudo is not available for this account (expected failure), e.g.:
+4. (Optional) From the new user, attempt a sudo command to demonstrate that this account has not been granted sudo access:
 
 ```bash
 sudo whoami
@@ -395,17 +459,17 @@ sudo deluser --remove-home lab4user
 - `adduser_lab4user.png`  
 - `lab4user_passwd.png`  
 - `su_lab4user.png`  
-- `sudo_whoami.png` (You attempted the sudo command and want to show the expected failure)  
+- `sudo_whoami.png` (optional; include it only if you perform the sudo test)  
 - `exit_back.png`  
 - (optional) `deluser.png`
 
 ---
 
-## Bonus Task 7 – Create a small demo script using an editor and run it
+## Bonus Task 7: Create and Run a Shell Script
 
 This task is optional — complete it for extra practice or extra credit. It is not required for passing the core lab tasks.
 
-### Steps (inside VM)
+### Steps
 1. Open an editor to create the script:
 
 ```bash
@@ -488,7 +552,7 @@ The incident response team suspects malicious files in system directories. You m
 
 ---
 
-### 3. Evidence Handling & File Operations
+### 3. Evidence Handling and File Operations
 
 **Scenario:**  
 You are creating a sandbox environment to safely analyze and handle suspicious files collected from a compromised system.
@@ -524,7 +588,7 @@ You are investigating a potential malware infection that is consuming excessive 
 
 ---
 
-### 5. User Account Audit & Privilege Escalation Simulation
+### 5. User Account Audit and Privilege Escalation Simulation
 
 **Scenario:**  
 You are performing a **user activity audit** on a compromised Linux server.  
@@ -553,35 +617,72 @@ Take a screenshot after every step and name it as shown above. Include all scree
 
 ## Summary
 
-In this lab you:
-- Verified VM configuration in VMware Workstation.  
-- Logged into the existing Ubuntu Server VM using the Windows host terminal and explored the filesystem.  
-- Practiced core Linux CLI commands for navigation and file manipulation (evidence via screenshots).  
-- Collected system and process information and created a non‑root user account without granting sudo.  
-- (Optional) Wrote and executed a simple demo script using an editor.
+In this lab, you:
+
+- verified the Ubuntu Server virtual machine configuration in VMware Workstation;
+- connected to the virtual machine from the host computer using SSH;
+- explored the Linux filesystem and hidden files;
+- practiced command-line navigation and file operations;
+- collected system, resource, and process information;
+- created and verified a non-root user account; and
+- optionally created and executed a shell script.
 
 ---
+
 ## Submission
-- Upload a **Word file and PDF or .md file** containing:
-  - Step outputs or terminal screenshots for each task  
-  - Your answers to the hands-on practical exam questions
-  - `workspace/` — folder containing files you created in the workspace:
-    - `README.md`, `main.py`, `.env` (required)
-    - `run-demo.sh` (optional / bonus)
-  - `screenshots/` — folder containing all required screenshots listed above (preferred), including `answers_md.png`
+
+1. Prepare a solution document containing:
+   - a title page with your complete name, registration number, course code, section, and GitHub username;
+   - headings for Tasks 1 through 6;
+   - the exam evaluation questions and their evidence;
+   - screenshots in the same order used in this README; and
+   - a short caption below every screenshot.
+
+2. Export the solution document using this exact filename:
+
+   ```text
+   Lab4_Solution.pdf
+   ```
+
+3. Place the PDF at:
+
+   ```text
+   Labs/Lab04/Lab4_Solution.pdf
+   ```
+
+4. Copy the Task 4 workspace into `Labs/Lab04/workspace/`. It must contain:
+   - `README.md`;
+   - `main.py`; and
+   - `.env`.
+
+   Include `run-demo.sh` only if you complete the bonus task.
+
+5. Keep all original screenshots inside `Labs/Lab04/screenshots/`.
+
+6. From the root of the `CC` repository, commit and push the completed lab:
+
+   ```bash
+   git status
+   git add Labs/Lab04
+   git commit -m "Submit Lab 04 evidence"
+   git push origin main
+   ```
+
+7. Open the `CC` repository on GitHub and confirm that the complete `Labs/Lab04` directory is visible.
 
 ---
 
-## Checklist (for students)
-- [ ] Verified VM settings (`vm_settings.png`)  
-- [ ] Logged into the VM from host and captured `vm_login.png` or `whoami_pwd.png`  
-- [ ] Collected filesystem and OS screenshots (`ls_root.png`, `os_release.png`, `home_ls.png`, etc.)  
-- [ ] Completed CLI tasks and captured `workspace_ls.png`, `history.png`  
-- [ ] Collected system info screenshots (`cpuinfo.png`, `meminfo.png`, `diskinfo.png`, `lsblk.png`, `uname.png`)  
-- [ ] Created `lab4user` and verified account (`lab4user_passwd.png`, `su_lab4user.png`)  
-- [ ] Captured written answers as `answers_md.png`  
-- [ ] (Optional) Created and ran `run-demo.sh` and captured output (`run_demo_output.png`)
-- [ ] Successfully completed the Exam Evaluation Questions with screenshots.
-- [ ] Pushed repository `CC_<student_Name>_<student_roll_number>`
+## Final Submission Checklist
 
----
+- [ ] `README.md` remains inside `Labs/Lab04/`.
+- [ ] `Lab4_Solution.pdf` is inside `Labs/Lab04/` and opens correctly.
+- [ ] Every required screenshot is inside `Labs/Lab04/screenshots/`.
+- [ ] Every screenshot uses the exact filename specified in this README.
+- [ ] Every terminal screenshot shows my `<github-username>@ubuntu` prompt, the required command, and its relevant output.
+- [ ] `workspace/` contains `README.md`, `main.py`, and `.env`.
+- [ ] `run-demo.sh` is included only if I completed the bonus task.
+- [ ] The filename `os-release.png` is used for the operating-system release screenshot.
+- [ ] No password, private key, token, recovery code, or other credential is visible.
+- [ ] All required tasks and exam evaluation questions are included in the solution PDF.
+- [ ] My submission is stored in the GitHub repository named exactly `CC`.
+- [ ] I committed and pushed the complete `Labs/Lab04` directory.
