@@ -5,7 +5,7 @@
 **Submission directory:** `Labs/Lab05`  
 **Screenshot directory:** `Labs/Lab05/screenshots`
 
-Complete the practical work using the Ubuntu Server virtual machine prepared in Lab 01 and used in Lab 04. Submit all evidence to your existing GitHub repository named exactly `CC`.
+Complete the practical work using the Ubuntu Server virtual machine prepared in Lab 01. Submit all evidence to your existing GitHub repository named exactly `CC`.
 
 ## Lab Objective
 
