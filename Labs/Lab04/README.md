@@ -42,9 +42,12 @@ CC/
         ├── README.md
         ├── Lab4_Solution.pdf
         ├── workspace/
-        │   ├── README.md
-        │   ├── main.py
-        │   ├── .env
+        │   ├── python_project/
+        │   │   ├── README.md
+        │   │   ├── main.py
+        │   │   └── .env
+        │   ├── java_app_copy/
+        │   │   └── (copy of the python_project files)
         │   └── run-demo.sh        # optional bonus file
         └── screenshots/
             ├── vm_settings.png
@@ -53,7 +56,7 @@ CC/
             └── ...
 ```
 
-Keep every original evidence screenshot inside `Labs/Lab04/screenshots/`. The `workspace/` directory must contain the files created during Task 4. Include `run-demo.sh` only if you complete the bonus task.
+Keep every original evidence screenshot inside `Labs/Lab04/screenshots/`. The `workspace/` directory must preserve the directory structure created during Task 4. Include `run-demo.sh` only if you complete the bonus task.
 
 ## Task List
 
@@ -78,9 +81,11 @@ Keep every original evidence screenshot inside `Labs/Lab04/screenshots/`. The `w
 1. Save every screenshot inside `Labs/Lab04/screenshots/`.
 2. Use the exact filename and capitalization specified for each step.
 3. Every terminal screenshot must clearly show:
-   - your `<github-username>@ubuntu` prompt;
+   - the active terminal prompt;
    - the required command; and
    - the relevant result or output.
+
+   For normal tasks, the prompt must show `<github-username>@ubuntu`. After switching users in Task 6, it must show `lab4user@ubuntu` where applicable.
 4. The GitHub username comparison is case-insensitive, but the spelling must match the username registered in the Student Marks Portal.
 5. GUI screenshots must clearly show the requested VMware setting or result.
 6. Screenshots must be clear, readable, and created from your own work.
@@ -650,12 +655,12 @@ In this lab, you:
    Labs/Lab04/Lab4_Solution.pdf
    ```
 
-4. Copy the Task 4 workspace into `Labs/Lab04/workspace/`. It must contain:
-   - `README.md`;
-   - `main.py`; and
-   - `.env`.
+4. Copy the complete `~/lab4/workspace/` directory into `Labs/Lab04/workspace/`. Preserve its structure:
+   - `workspace/python_project/` must contain `README.md`, `main.py`, and `.env`;
+   - `workspace/java_app_copy/` must contain the copied project files; and
+   - `workspace/run-demo.sh` is included only if you complete the bonus task.
 
-   Include `run-demo.sh` only if you complete the bonus task.
+   Git does not track an empty `java_app/` directory, so it does not need to appear on GitHub unless you place a file inside it.
 
 5. Keep all original screenshots inside `Labs/Lab04/screenshots/`.
 
@@ -678,9 +683,10 @@ In this lab, you:
 - [ ] `Lab4_Solution.pdf` is inside `Labs/Lab04/` and opens correctly.
 - [ ] Every required screenshot is inside `Labs/Lab04/screenshots/`.
 - [ ] Every screenshot uses the exact filename specified in this README.
-- [ ] Every terminal screenshot shows my `<github-username>@ubuntu` prompt, the required command, and its relevant output.
-- [ ] `workspace/` contains `README.md`, `main.py`, and `.env`.
-- [ ] `run-demo.sh` is included only if I completed the bonus task.
+- [ ] Every terminal screenshot shows the correct active prompt, the required command, and its relevant output.
+- [ ] `workspace/python_project/` contains `README.md`, `main.py`, and `.env`.
+- [ ] `workspace/java_app_copy/` contains the copied project files.
+- [ ] `workspace/run-demo.sh` is included only if I completed the bonus task.
 - [ ] The filename `os-release.png` is used for the operating-system release screenshot.
 - [ ] No password, private key, token, recovery code, or other credential is visible.
 - [ ] All required tasks and exam evaluation questions are included in the solution PDF.
