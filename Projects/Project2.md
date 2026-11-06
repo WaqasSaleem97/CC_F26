@@ -40,17 +40,18 @@ Create a self-service factory that provisions short-lived student lab environmen
 
 ## 🧱 Architecture Overview
 
-```text
-Student request (owner + profile + environment)
-                    |
-             provision-lab.sh
-                    |
-       Terraform workspace / isolated state
-                    |
-          Tagged EC2 lab instances
-                    |
-       Ansible dynamic inventory + profile role
-```
+![Project 2 architecture overview showing the components and workflow](images/project2-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Request:** Choose owner, environment and software profile.
+2. **Provision:** Terraform isolates state and creates tagged EC2s.
+3. **Configure:** Ansible selects roles from EC2 tags.
+4. **Expire:** Verify the lab, then report and destroy safely.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

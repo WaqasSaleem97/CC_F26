@@ -1,6 +1,6 @@
 # Cloud Computing F26 – Student Projects
 
-This directory contains ten project specifications based only on the concepts covered in Labs 01–15. Each project uses the same 100-mark structure and requires reproducible infrastructure, safe automation, verification, documentation and cleanup.
+This directory contains ten project specifications based only on the concepts covered in Labs 01–15. Each project uses the same 100-mark structure and requires reproducible infrastructure, safe automation, verification, documentation and cleanup. Every project specification also includes a full-resolution architecture picture with a simple four-step explanation.
 
 ## Project Catalog
 

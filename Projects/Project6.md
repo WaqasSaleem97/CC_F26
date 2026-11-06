@@ -40,12 +40,18 @@ Build an Ansible-managed Linux fleet with controlled patching, account and permi
 
 ## 🧱 Architecture Overview
 
-```text
-Controller (Ansible)
-   | dynamic inventory by Role tag
-   +--> web-1 -> web-2 (serial patch + HTTP check)
-   +--> util-1 -> util-2 (serial patch + service check)
-```
+![Project 6 architecture overview showing the components and workflow](images/project6-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Discover:** EC2 tags build web and utility groups.
+2. **Baseline:** Roles enforce users, permissions, SSH and UFW.
+3. **Patch:** One host changes at a time with health checks.
+4. **Comply:** Audit finds drift and remediation restores it.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

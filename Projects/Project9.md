@@ -40,15 +40,18 @@ Design a recoverable Nginx web service using Terraform, Ansible, a private S3 ba
 
 ## 🧱 Architecture Overview
 
-```text
-Primary: Client -> Nginx gateway -> Backend A/B
-                            |
-                 backup (content/config/manifest)
-                            v
-                     Private S3 bucket
-                            |
-      Terraform rebuild + Ansible restore -> Recovered service
-```
+![Project 9 architecture overview showing the components and workflow](images/project9-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Deploy:** Terraform and Ansible create a healthy service.
+2. **Back Up:** Content, config and hash manifest go to private S3.
+3. **Rebuild:** Compute is destroyed, then recreated from code.
+4. **Restore:** Selected backup returns the verified app version.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

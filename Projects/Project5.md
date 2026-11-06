@@ -40,13 +40,18 @@ Implement a canary deployment workflow using an Nginx load balancer, stable back
 
 ## 🧱 Architecture Overview
 
-```text
-Clients -> Nginx LB (HTTPS optional)
-              | weight 9
-              +--------> Stable A / Stable B (v1)
-              | weight 1
-              +--------> Canary C (v2)
-```
+![Project 5 architecture overview showing the components and workflow](images/project5-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Deploy:** Ansible sends v2 only to the canary backend.
+2. **Route:** Nginx sends a small traffic share to canary.
+3. **Test:** Smoke tests and samples check status/content.
+4. **Decide:** Promote healthy v2 or roll back to stable v1.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

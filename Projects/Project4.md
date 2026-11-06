@@ -40,14 +40,18 @@ Create a tag-controlled lifecycle manager that starts, stops and reports on non-
 
 ## 🧱 Architecture Overview
 
-```text
-Ubuntu controller / Codespace
-  | Bash + cron + AWS CLI
-  | filter: ManagedBy=Terraform, Schedule=office-hours
-  v
-EC2 dev-1     EC2 dev-2     EC2 test-1
-(production-tagged control instance must never be changed)
-```
+![Project 4 architecture overview showing the components and workflow](images/project4-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Tag:** Terraform marks resources with environment/schedule.
+2. **Filter:** Bash lists exact targets and blocks production.
+3. **Act:** AWS CLI starts or stops only approved instances.
+4. **Audit:** Logs prove every action and resulting state.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

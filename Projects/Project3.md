@@ -40,14 +40,18 @@ Deploy a private Gitea collaboration service on EC2. Terraform creates the netwo
 
 ## 🧱 Architecture Overview
 
-```text
-Administrator
-     | SSH (restricted) / HTTPS
-     v
-EC2: Nginx TLS reverse proxy -> Gitea container
-     |                         |
-     +---- backup script ------+----> Private S3 bucket
-```
+![Project 3 architecture overview showing the components and workflow](images/project3-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Provision:** Terraform creates EC2, network and private S3.
+2. **Secure:** Ansible installs Docker, UFW and Nginx TLS.
+3. **Collaborate:** Users reach Gitea only through HTTPS.
+4. **Recover:** Back up persistent data and validate restoration.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

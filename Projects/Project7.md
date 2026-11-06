@@ -40,15 +40,18 @@ Implement a controlled IAM onboarding, role-change and offboarding workflow driv
 
 ## 🧱 Architecture Overview
 
-```text
-users.csv -> validation.sh -> Pull Request review
-                         |
-                    Terraform apply
-                         |
-       IAM groups/users/memberships/policies
-                         |
-      sanitized AWS CLI report -> Nginx audit page
-```
+![Project 7 architecture overview showing the components and workflow](images/project7-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Request:** CSV records the person, group, owner and status.
+2. **Review:** Bash validation and PR block unsafe changes.
+3. **Apply:** Terraform manages IAM and private remote state.
+4. **Audit:** A sanitized dashboard shows no credentials.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

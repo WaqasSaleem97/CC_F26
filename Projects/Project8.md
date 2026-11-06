@@ -40,12 +40,18 @@ Build a single Nginx HTTPS gateway in front of three different applications: a s
 
 ## 🧱 Architecture Overview
 
-```text
-Client --HTTPS--> Nginx Gateway
-                    | /static/ -> Nginx backend
-                    | /apache/ -> HTTPD backend
-                    | /php/    -> Nginx + PHP-FPM backend
-```
+![Project 8 architecture overview showing the components and workflow](images/project8-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Provision:** Terraform creates the gateway and three roles.
+2. **Configure:** Ansible installs three different web stacks.
+3. **Route:** Nginx TLS gateway sends each path to its backend.
+4. **Rotate:** Certificate role checks, renews and safely reloads.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

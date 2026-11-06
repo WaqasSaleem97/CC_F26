@@ -40,17 +40,18 @@ Build a tag-driven AWS inventory and compliance dashboard. Terraform provisions 
 
 ## 🧱 Architecture Overview
 
-```text
-Administrator / Codespace
-          |
-          | Terraform + AWS CLI + Ansible
-          v
-+---------------- AWS VPC ----------------+
-| Dashboard EC2 ----> Managed EC2 A       |
-|      |               Managed EC2 B       |
-|      +-- Nginx: inventory/compliance     |
-+------------------------------------------+
-```
+![Project 1 architecture overview showing the components and workflow](images/project1-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Build:** Terraform creates the VPC, dashboard and managed fleet.
+2. **Configure:** Ansible installs Nginx and health pages.
+3. **Collect:** AWS CLI and Bash read tags, ports and states.
+4. **Verify:** Nginx shows PASS/FAIL and remediation evidence.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 

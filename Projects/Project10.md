@@ -40,13 +40,18 @@ Create a defensive incident-response workspace for collecting Linux and Nginx ev
 
 ## 🧱 Architecture Overview
 
-```text
-App EC2 A -----\
-                   Ansible/Bash collection -> Evidence Collector
-App EC2 B -----/                         |
-                                          +-> restricted Nginx summary portal
-                                          +-> private evidence archive
-```
+![Project 10 architecture overview showing the components and workflow](images/project10-architecture.png)
+
+**Color guide:** Blue represents users or control, purple represents Terraform, orange represents Ansible or Bash automation, green represents running AWS services, and gold represents storage or reports.
+
+### Simple Project Flow
+
+1. **Simulate:** Create one safe issue: service, user or file mode.
+2. **Collect:** Read-only scripts gather host facts and log excerpts.
+3. **Preserve:** Timestamped bundles and hashes protect integrity.
+4. **Respond:** Remediate, recollect and compare before/after.
+
+> The picture is a conceptual guide. Your report must include your own architecture diagram using the actual resource names, network design and security rules from your implementation.
 
 Create your own architecture diagram in the report. The diagram must show network boundaries, traffic direction, security controls and the Terraform/Ansible/Bash responsibility split.
 
