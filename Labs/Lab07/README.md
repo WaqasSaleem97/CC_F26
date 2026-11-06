@@ -50,6 +50,7 @@ Keep every original evidence screenshot inside `Labs/Lab07/screenshots/`. Store 
 ## Task List
 
 - [Screenshot Rules](#screenshot-rules)
+- [Required Screenshot Filenames](#required-screenshot-filenames)
 - [Getting Started](#getting-started)
 - [Task 1: Print and Filter Environment Variables](#task-1-print-and-filter-environment-variables)
 - [Task 2: Export Temporary Database Variables and Observe Scope](#task-2-export-temporary-database-variables-and-observe-scope)
@@ -80,6 +81,79 @@ Keep every original evidence screenshot inside `Labs/Lab07/screenshots/`. Store 
 11. Commit and push the complete `Labs/Lab07` directory before the deadline.
 
 Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
+
+### Required Screenshot Filenames
+
+These are the 32 required Lab 7 guided-task screenshot filenames. Save them inside `Labs/Lab07/screenshots/` using the exact names below:
+
+```text
+task1_printenv_all.png
+task1_grep_shell_home_user.png
+task2_exports_all.png
+task2_echoes_all.png
+task2_printenv_grep_db.png
+task2_after_restart_checks.png
+task3_bashrc_added.png
+task3_source_and_verification.png
+task3_after_restart_persistent.png
+task4_etc_environment_before.png
+task4_echo_path_before.png
+task4_etc_environment_edit_vim.png
+task4_etc_environment_after.png
+task4_echo_class_and_path.png
+task4_welcome_create_and_chmod.png
+task4_welcome_run_dot.png
+task4_bashrc_path_line.png
+task4_bashrc_source_and_welcome.png
+task5_ufw_enable_and_status.png
+task5_ufw_deny_22_and_status.png
+task5_ssh_attempt_blocked.png
+task5_ufw_allow_reload_status.png
+task5_ssh_success_after_allow.png
+task6_windows_sshkey_and_list.png
+task6_windows_public_key.png
+task6_windows_known_hosts_cleared_and_empty.png
+task6_windows_ssh_accept_hostkey_and_login.png
+task6_windows_known_hosts_after_connect.png
+task6_server_clear_authorized_keys.png
+task6_server_add_key_and_show.png
+task6_ssh_passwordless_login.png
+task6_ssh_with_identity_file.png
+```
+
+### Exam Evaluation Screenshot Filenames
+
+The existing exam evaluation questions use these 27 filenames. Follow those questions below and save their evidence in the same `screenshots/` directory:
+
+```text
+EE_q1_audit_generation.png
+EE_q1_audit_report.png
+EE_q1_sensitive_names_only.png
+EE_q2_unexported_scope.png
+EE_q2_exported_scope.png
+EE_q2_unset_cleanup.png
+EE_q3_user_persistence_config.png
+EE_q3_system_scope_config.png
+EE_q3_owner_fresh_login.png
+EE_q3_other_user_scope.png
+EE_q3_configuration_cleanup.png
+EE_q4_initial_command_failure.png
+EE_q4_tool_and_path_fix.png
+EE_q4_fresh_session_success.png
+EE_q5_service_and_listener.png
+EE_q5_client_baseline_success.png
+EE_q5_ufw_block_rule.png
+EE_q5_client_blocked.png
+EE_q5_source_restricted_rule.png
+EE_q5_client_restricted_success.png
+EE_q5_firewall_cleanup.png
+EE_q6_client_key_fingerprint.png
+EE_q6_server_key_permissions.png
+EE_q6_fingerprint_match.png
+EE_q6_explicit_key_success.png
+EE_q6_unregistered_key_failure.png
+EE_q6_exam_key_cleanup.png
+```
 
 ## Getting Started
 
@@ -116,7 +190,7 @@ printenv | grep USER
 
 - Save screenshot as: `task1_grep_shell_home_user.png` (single screenshot showing all three commands and outputs)
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task1_printenv_all.png`
 - `task1_grep_shell_home_user.png`
@@ -168,7 +242,7 @@ Notes:
 
 - The single-screenshot-per-group rule helps graders quickly see related commands and their immediate outputs together.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task2_exports_all.png`
 - `task2_echoes_all.png`
@@ -218,7 +292,7 @@ Notes:
 
 - The instructor requires the editor view showing the three export lines (step 1) and grouped verification screenshots (steps 2–3).
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task3_bashrc_added.png`
 - `task3_source_and_verification.png`
@@ -315,7 +389,7 @@ Notes:
 
 - If you prefer `~/bin`, substitute `~/welcome` accordingly and capture the same grouped screenshots.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task4_etc_environment_before.png`
 - `task4_echo_path_before.png`
@@ -381,7 +455,7 @@ Notes:
 
 - When running multiple ufw commands consecutively, grouping them in one screenshot shows the command sequence and resulting status together.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task5_ufw_enable_and_status.png`
 - `task5_ufw_deny_22_and_status.png`
@@ -489,7 +563,7 @@ Important notes:
 - Do NOT show or upload private key files.
 - Ensure server-side permissions are strict: `~/.ssh` 700, `authorized_keys` 600.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task6_windows_sshkey_and_list.png`
 - `task6_windows_public_key.png`
@@ -534,7 +608,7 @@ must not disclose secret values.
 5. After taking the required screenshots, do not add
    `environment-audit.txt` to the repository. Only its screenshots are required.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - Save screenshot as: `EE_q1_audit_generation.png` (terminal evidence showing creation of the report from live environment information)
 - Save screenshot as: `EE_q1_audit_report.png` (the displayed text file showing all required fields and one `PATH` directory per line)
@@ -559,7 +633,7 @@ problem using a parent shell and a child Bash process.
 4. Remove `APP_MODE` and prove that it is absent from both the parent and a new
    child process.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - Save screenshot as: `EE_q2_unexported_scope.png` (parent value visible while environment and child-process checks show it is unavailable)
 - Save screenshot as: `EE_q2_exported_scope.png` (exported value visible in the parent environment and child process)
@@ -588,7 +662,7 @@ an institutional setting should be available to every login account.
 5. After collecting evidence, remove both exam variables from their respective
    configuration files and prove the cleanup.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - Save screenshot as: `EE_q3_user_persistence_config.png` (user-specific configuration containing `USER_NOTICE` and the unique registration-number value)
 - Save screenshot as: `EE_q3_system_scope_config.png` (system-wide configuration containing `DEPARTMENT`)
@@ -619,7 +693,7 @@ Diagnose and correct both deployment problems.
    command name—without an absolute path, relative path, or `./` prefix.
 6. Show the resolved command location and successful output.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - Save screenshot as: `EE_q4_initial_command_failure.png` (the file exists but running it by name fails before configuration is repaired)
 - Save screenshot as: `EE_q4_tool_and_path_fix.png` (utility contents, corrected executable permission, and persistent `PATH` configuration)
@@ -653,7 +727,7 @@ remain available throughout the evaluation.
 9. Do not add `index.html` to the repository. Only screenshots showing its
    contents and the working service are required.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - Save screenshot as: `EE_q5_service_and_listener.png` (displayed HTML contents plus evidence that TCP `8080` is listening)
 - Save screenshot as: `EE_q5_client_baseline_success.png` (successful Windows-client response showing the unique page before the block)
@@ -693,7 +767,7 @@ used, and demonstrate that an unregistered key is rejected.
 8. Remove only the exam public-key entry from the server and preserve the
    student's normal Lab 07 key.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - Save screenshot as: `EE_q6_client_key_fingerprint.png` (client key-file listing and public-key fingerprint without private-key contents)
 - Save screenshot as: `EE_q6_server_key_permissions.png` (server authorized-key entry and required SSH file permissions)

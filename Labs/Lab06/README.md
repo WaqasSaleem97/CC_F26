@@ -52,6 +52,7 @@ Keep every original evidence screenshot inside `Labs/Lab06/screenshots/`. Store 
 ## Task List
 
 - [Screenshot Rules](#screenshot-rules)
+- [Required Screenshot Filenames](#required-screenshot-filenames)
 - [Getting Started](#getting-started)
 - [Task 1: Switch to Root and Return to Your Normal User](#task-1-switch-to-root-and-return-to-your-normal-user)
 - [Task 2: Create tom and Inspect Account Files](#task-2-create-tom-and-inspect-account-files)
@@ -90,6 +91,150 @@ Keep every original evidence screenshot inside `Labs/Lab06/screenshots/`. Store 
 11. Commit and push the complete `Labs/Lab06` directory before the deadline.
 
 Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
+
+### Required Screenshot Filenames
+
+These are the 106 required Lab 6 guided-task screenshot filenames. Save them inside `Labs/Lab06/screenshots/` using the exact names below:
+
+```text
+task1_set_root_password.png
+task1_su_root.png
+task1_exit_to_user.png
+task2_adduser_tom.png
+task2_verify_passwd.png
+task2_verify_group.png
+task2_verify_shadow.png
+task3_groupadd.png
+task3_change_primary_group.png
+task3_add_secondary_groups.png
+task3_reset_secondary_groups.png
+task4_add_users.png
+task4_scooby_su_auth_failure.png
+task4_set_password_scooby.png
+task4_scooby_su_no_home.png
+task4_scooby_no_home.png
+task4_scooby_create_home.png
+task4_scooby_login_success.png
+task4_verify_users.png
+task4_shell_switching.png
+task4_add_groups.png
+task4_verify_groups.png
+task4_delete_groups.png
+task4_delete_users.png
+task5_create_student.png
+task5_create_files.png
+task5_chown_file1.png
+task5_chgrp_file1.png
+task5_file_types.png
+task5_exit_student.png
+task6_su_student.png
+task6_chmod_remove_rwx.png
+task6_chmod_add_r.png
+task6_chmod_u_plus_x.png
+task6_chmod_ug_plus_w.png
+task6_chmod_ugo_minus_rwx.png
+task7_student_context.png
+task7_chmod_set_all_rwx.png
+task7_remove_exec_go.png
+task7_remove_all_perms.png
+task8_student_context.png
+task8_chmod_777.png
+task8_chmod_700.png
+task8_chmod_744.png
+task8_chmod_640.png
+task8_chmod_664.png
+task8_chmod_775.png
+task8_chmod_750.png
+task9_grep_less.png
+task9_grep_more.png
+task9_grep_head.png
+task9_redirect_overwrite.png
+task9_redirect_append.png
+task10_b1_vim.png
+task10_b1_run.png
+task10_b2_vim.png
+task10_b2_run.png
+task10_b3_vim.png
+task10_b3_run.png
+task10_b4_vim.png
+task10_b4_run.png
+task10_b5_vim.png
+task10_b5_run.png
+task10_b6_vim.png
+task10_b6_run.png
+task11_b0_vim.png
+task11_b0_run.png
+task11_b1_vim.png
+task11_b1_run.png
+task11_b2_vim.png
+task11_b2_run.png
+task11_b3_vim.png
+task11_b3_run.png
+task11_b4_vim.png
+task11_b4_run.png
+task11_b5_vim.png
+task11_b5_run.png
+task11_b6_vim.png
+task11_b6_run.png
+task11_b7_vim.png
+task11_b7_run.png
+task11_b8_vim.png
+task11_b8_run.png
+task11_b9_vim.png
+task11_b9_run.png
+task12_b1_vim.png
+task12_b1_run.png
+task12_b2_vim.png
+task12_b2_run.png
+task13_b1_vim.png
+task13_b1_run.png
+task13_b2_vim.png
+task13_b2_run.png
+task13_b3_vim.png
+task13_b3_run.png
+task13_b4_vim.png
+task13_b4_run.png
+task14_fork.png
+task14_codespace_launch.png
+task14_start_script_ls.png
+task14_start_run.png
+task14_ports_view.png
+task14_vnc_url.png
+task14_vnc_password_prompt.png
+task14_vnc_desktop.png
+task14_stop_run.png
+```
+
+### Conditional and Optional Screenshots
+
+- `task9_journalctl_alternative.png` — Required only when Task 9 uses the journal fallback because `/var/log/syslog` is unavailable.
+- `task14_vnc_connect.png` — Optional additional evidence of the VNC Connect screen in Task 14.
+
+### Exam Evaluation Screenshot Filenames
+
+The existing exam evaluation questions use these 19 filenames. Follow those questions below and save their evidence in the same `screenshots/` directory:
+
+```text
+Q1_groups_created.png
+Q1_group_changes.png
+Q1_group_verification.png
+Q2_chown_chgrp.png
+Q2_symbolic_numeric.png
+Q2_permissions_ls.png
+Q3_grep_pipe.png
+Q3_redirect_overwrite_append.png
+Q3_pager_view.png
+Q4_step1_var1.png
+Q4_step2_allfiles.png
+Q4_step3_dirfile_checks.png
+Q5_eq_examples.png
+Q5_numeric_tests.png
+Q5_string_tests.png
+Q6_script_forloop_vim.png
+Q6_forloop_run.png
+Q7_while_session.png
+Q7_function_sum.png
+```
 
 ## Getting Started
 
@@ -135,7 +280,7 @@ whoami
 
 - Save screenshot as: `task1_exit_to_user.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task1_set_root_password.png`
 - `task1_su_root.png`
@@ -179,7 +324,7 @@ Notes:
 
 - `/etc/shadow` stores password hashes and password-aging fields. The `cut` command displays the username and aging fields while omitting the password-hash field. Use `sudo` to read this protected file; do not publish password hashes.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task2_adduser_tom.png`
 - `task2_verify_passwd.png`
@@ -230,7 +375,7 @@ groups tom
 
 - Save screenshot as: `task3_reset_secondary_groups.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task3_groupadd.png`
 - `task3_change_primary_group.png`
@@ -348,7 +493,7 @@ cat /etc/passwd
 
 - Save screenshots as: `task4_delete_groups.png`, `task4_delete_users.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task4_add_users.png`
 - `task4_scooby_su_auth_failure.png`
@@ -419,7 +564,7 @@ exit
 
 - Save screenshot as: `task5_exit_student.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task5_create_student.png`
 - `task5_create_files.png`
@@ -491,7 +636,7 @@ Return to your normal account before continuing:
 exit
 ```
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task6_su_student.png`
 - `task6_chmod_remove_rwx.png`
@@ -545,7 +690,7 @@ Return to your normal account before continuing:
 exit
 ```
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task7_student_context.png`
 - `task7_chmod_set_all_rwx.png`
@@ -631,7 +776,7 @@ Return to your normal account before continuing:
 exit
 ```
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task8_student_context.png`
 - `task8_chmod_777.png`
@@ -693,7 +838,7 @@ sudo journalctl --no-pager | grep -i error > ~/journal_errors.txt
 
 - `task9_journalctl_alternative.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task9_grep_less.png`
 - `task9_grep_more.png`
@@ -864,7 +1009,7 @@ Important notes for Task 10:
 - After saving, run the script and capture the terminal output for that run (these are the `task10_b*_run.png` files).
 - If a step reports that a directory/file already exists, that is acceptable — still capture the output screenshot showing the script's message.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task10_b1_vim.png`
 - `task10_b1_run.png`
@@ -1112,7 +1257,7 @@ Notes for Task 11
 - Using the two example runs per step in a single terminal screenshot helps demonstrate both true and false results for the operator being taught.
 - If a non-numeric value is used for $1 during integer comparisons the shell may print an error; that is expected here because we are demonstrating the operator behavior step-by-step. (If you want to avoid runtime errors, you can add integer validation before the comparisons — but for this exercise we are isolating each if-test into its own step.)
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task11_b0_vim.png`
 - `task11_b0_run.png`
@@ -1183,7 +1328,7 @@ chmod +x setup.sh
   - vim editor showing the for-loop appended: `task12_b2_vim.png`
   - script run output showing the printed arguments: `task12_b2_run.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task12_b1_vim.png`
 - `task12_b1_run.png`
@@ -1329,7 +1474,7 @@ Notes for Task 13:
 - The while-loop and the functions are interactive; include the user inputs in the run screenshots to demonstrate the behavior.
 - If you decide to use the function-based approach for interactive summation, remove the earlier standalone while-loop to avoid duplicate interaction.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task13_b1_vim.png`
 - `task13_b1_run.png`
@@ -1436,7 +1581,7 @@ Troubleshooting tips:
 - If the VNC page fails to connect, verify the `start-desktop.sh` completed without errors and that the VNC server is listening on the expected port inside the Codespace.
 - If Codespaces is unavailable for your account, consider forking and running the same scripts on another cloud VM that forwards port 6080 and adapt screenshots/file names accordingly.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task14_fork.png`
 - `task14_codespace_launch.png`
@@ -1470,7 +1615,7 @@ Create groups and manage a user’s primary and supplementary group memberships.
 3. Show the final `id` and `/etc/group` lines that prove the changes.  
    - Screenshot: `Q1_group_verification.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `Q1_groups_created.png`
 - `Q1_group_changes.png`
@@ -1491,7 +1636,7 @@ Demonstrate ownership changes and apply both symbolic and numeric permission cha
 3. Show `ls -l` for the file after each change to document the permission bits.  
    - Screenshot: `Q2_permissions_ls.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `Q2_chown_chgrp.png`
 - `Q2_symbolic_numeric.png`
@@ -1512,7 +1657,7 @@ Filter system logs and save results using redirection and piping.
 3. Use a pager to view the saved file.  
    - Screenshot: `Q3_pager_view.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `Q3_grep_pipe.png`
 - `Q3_redirect_overwrite_append.png`
@@ -1533,7 +1678,7 @@ Build and run a script incrementally that demonstrates variables, command substi
 3. Append directory and file checks that create `dir1` and `dir1/file2` if missing, and display their final permissions.  
    - Screenshot: `Q4_step3_dirfile_checks.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `Q4_step1_var1.png`
 - `Q4_step2_allfiles.png`
@@ -1554,7 +1699,7 @@ Incrementally add numeric and string comparison tests to a script and show both 
 3. Append string equality (`=`) and inequality (`!=`) checks and a `-z` (zero-length) test for the second argument, demonstrating true/false cases.  
    - Screenshot: `Q5_string_tests.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `Q5_eq_examples.png`
 - `Q5_numeric_tests.png`
@@ -1573,7 +1718,7 @@ Write a script that prints all provided arguments and demonstrate correct handli
 2. Run the script with mixed single and quoted multi-word arguments and capture the output showing each argument on its own line.  
    - Screenshot: `Q6_forloop_run.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `Q6_script_forloop_vim.png`
 - `Q6_forloop_run.png`
@@ -1591,7 +1736,7 @@ Implement an interactive or non-interactive summation function and a demonstrate
 2. Add a function that accepts two numeric arguments, returns their sum, and demonstrate capturing its result in a variable.  
    - Screenshot: `Q7_function_sum.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `Q7_while_session.png`
 - `Q7_function_sum.png`

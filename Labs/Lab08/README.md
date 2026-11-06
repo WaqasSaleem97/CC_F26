@@ -55,6 +55,7 @@ Keep every original evidence screenshot inside `Labs/Lab08/screenshots/`. Store 
 ## Task List
 
 - [Screenshot Rules](#screenshot-rules)
+- [Required Screenshot Filenames](#required-screenshot-filenames)
 - [Getting Started](#getting-started)
 - [Task 1: Create an AWS Account and Enable the UAE Region](#task-1-create-an-aws-account-and-enable-the-uae-region)
 - [Task 2: Create IAM Admin and Lab8User Accounts](#task-2-create-iam-admin-and-lab8user-accounts)
@@ -83,6 +84,51 @@ Keep every original evidence screenshot inside `Labs/Lab08/screenshots/`. Store 
 11. Commit and push the complete `Labs/Lab08` directory before the deadline.
 
 Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
+
+### Required Screenshot Filenames
+
+These are the 38 required Lab 8 guided-task screenshot filenames, including cleanup evidence. Save them inside `Labs/Lab08/screenshots/` using the exact names below:
+
+```text
+task1_open_signup_page.png
+task1_signed_up_confirmation.png
+task1_root_signed_in.png
+task1_enable_region_me-central-1.png
+task1_summary.png
+task2_open_iam_console.png
+task2_admin_create_confirmation.png
+task2_admin_csv_and_signin_url.png
+task2_admin_console_after_login.png
+task2_create_lab8user_and_csv.png
+task2_lab8user_csv_saved.png
+task2_lab8user_logged_in.png
+task2_summary.png
+task3_open_vpc_console.png
+task3_vpcs_list.png
+task3_subnets_list.png
+task3_route_tables_list.png
+task3_network_acls_list.png
+task3_summary.png
+task4_open_ec2_console.png
+task4_launch_instance_config.png
+task4_keypair_download.png
+task4_instance_running_console.png
+task4_ssh_from_windows_to_ec2.png
+task4_ec2_install_docker_compose_started.png
+task4_vim_compose_yaml_paste.png
+task4_compose_yaml_saved_ls.png
+task4_usermod_and_groups_before_after.png
+task4_docker_compose_up.png
+task4_security_group_allow_3000.png
+task4_gitea_install_page.png
+task4_gitea_create_repo.png
+task4_summary.png
+cleanup_terminate_instance.png
+cleanup_delete_volumes_snapshots.png
+cleanup_delete_security_group_and_keypair.png
+cleanup_iam_users_deleted.png
+cleanup_summary.png
+```
 
 ## Getting Started
 
@@ -131,7 +177,7 @@ Do these steps in order and capture a screenshot immediately after each numbered
 
 Important: Record your root login email, but never share your root password. Clean up resources after the lab.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task1_open_signup_page.png`
 - `task1_signed_up_confirmation.png`
@@ -203,7 +249,7 @@ Notes:
 
 - Keep the .csv files private. Only include signin URL and console screens in submission—do not include password text in screenshots.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task2_open_iam_console.png`
 - `task2_admin_create_confirmation.png`
@@ -249,7 +295,7 @@ Do these steps in order and capture a screenshot immediately after viewing each 
 
 In each screenshot show the console top bar with region set to me-central-1.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task3_open_vpc_console.png`
 - `task3_vpcs_list.png`
@@ -394,7 +440,7 @@ Notes:
 - If http://Public-IP:3000 does not load, check instance status, docker compose logs, and security group inbound rules.
 - If you used different ports or file paths, document them in your Lab8 writeup.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task4_open_ec2_console.png`
 - `task4_launch_instance_config.png`
@@ -440,7 +486,7 @@ Cleanup steps and required screenshots:
 5. Show the final resource inventory and review Billing for costs incurred during the lab. Cleanup stops continued use of deleted resources; it does not cancel charges already incurred.  
    - Save screenshot as: `cleanup_summary.png` — AWS resource inventories showing the lab resources removed, with the Billing review if available. A zero or unchanged billing display alone is not evidence that resources were deleted.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `cleanup_terminate_instance.png`
 - `cleanup_delete_volumes_snapshots.png`
