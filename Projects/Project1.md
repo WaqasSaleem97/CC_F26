@@ -13,6 +13,8 @@ Build a tag-driven AWS inventory and compliance dashboard. Terraform provisions 
 
 ### Problem to Solve
 
+**Think of this as:** an asset register combined with an automatic inspection report for AWS servers.
+
 AWS administrators can have several EC2 instances but no single place to see what is running, whether the required tags are present, which ports are publicly exposed and whether the web services are healthy. Repeating these checks manually is slow, inconsistent and difficult to audit.
 
 ### Scope

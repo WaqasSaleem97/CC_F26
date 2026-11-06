@@ -13,6 +13,8 @@ Create a self-service factory that provisions short-lived student lab environmen
 
 ### Problem to Solve
 
+**Think of this as:** a vending machine that creates temporary cloud laboratories when students need them.
+
 Creating development, testing and demonstration labs manually takes time and often leaves unused AWS resources running. Different users also need different software profiles, while each environment must remain isolated and easy to remove.
 
 ### Scope

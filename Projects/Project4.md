@@ -13,6 +13,8 @@ Create a tag-controlled lifecycle manager that starts, stops and reports on non-
 
 ### Problem to Solve
 
+**Think of this as:** an automatic power switch that turns non-production cloud servers on and off safely.
+
 Development and testing EC2 instances often remain powered on outside working hours and create unnecessary cost. Manual start and stop operations are repetitive and can accidentally affect production resources.
 
 ### Scope

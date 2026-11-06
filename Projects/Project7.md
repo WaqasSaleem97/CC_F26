@@ -13,6 +13,8 @@ Implement a controlled IAM onboarding, role-change and offboarding workflow driv
 
 ### Problem to Solve
 
+**Think of this as:** an employee access system that gives, changes and removes AWS permissions as people join, move or leave.
+
 Manual AWS IAM onboarding and offboarding can leave users in incorrect groups, retain access after they leave or create credentials that are handled insecurely. Access changes therefore need validation, review and a reproducible record.
 
 ### Scope

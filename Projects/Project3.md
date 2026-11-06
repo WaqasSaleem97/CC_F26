@@ -13,6 +13,8 @@ Deploy a private Gitea collaboration service on EC2. Terraform creates the netwo
 
 ### Problem to Solve
 
+**Think of this as:** a private GitHub for an organization, with secure access, backup and recovery.
+
 A team that hosts source code internally needs secure Git access, persistent repository data and dependable backups. Running a Git service without HTTPS or a tested recovery process creates both security and data-loss risks.
 
 ### Scope

@@ -13,6 +13,8 @@ Create a defensive incident-response workspace for collecting Linux and Nginx ev
 
 ### Problem to Solve
 
+**Think of this as:** a digital evidence room that safely collects, protects and reports information during an incident.
+
 During a Linux or web-service incident, administrators need useful evidence without unnecessarily changing the affected hosts or exposing sensitive raw data. The collection process must be repeatable and must prove that evidence was not modified.
 
 ### Scope

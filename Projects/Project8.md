@@ -13,6 +13,8 @@ Build a single Nginx HTTPS gateway in front of three different applications: a s
 
 ### Problem to Solve
 
+**Think of this as:** one secure reception desk that directs users to three different web applications.
+
 Several web applications may need to share one secure public entry point while their backend servers remain protected. HTTPS certificates also expire and must be checked and replaced without breaking the gateway.
 
 ### Scope

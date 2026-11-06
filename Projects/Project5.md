@@ -13,6 +13,8 @@ Implement a canary deployment workflow using an Nginx load balancer, stable back
 
 ### Problem to Solve
 
+**Think of this as:** letting a small group of users test a new application version before releasing it to everyone.
+
 Deploying a new application version to every user at once can turn one defect into a complete outage. The team needs a way to expose a small amount of traffic to the new version, test it and reverse the change quickly when validation fails.
 
 ### Scope

@@ -13,6 +13,8 @@ Design a recoverable Nginx web service using Terraform, Ansible, a private S3 ba
 
 ### Problem to Solve
 
+**Think of this as:** a disaster drill that proves a deleted web environment can be rebuilt and restored.
+
 Keeping a backup does not guarantee recovery after servers are lost. The organization must prove that infrastructure can be recreated, the correct archive can be restored and the recovered service meets documented recovery objectives.
 
 ### Scope

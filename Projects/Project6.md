@@ -13,6 +13,8 @@ Build an Ansible-managed Linux fleet with controlled patching, account and permi
 
 ### Problem to Solve
 
+**Think of this as:** a central IT administrator that patches, checks and repairs a group of Linux servers.
+
 A Linux server fleet can gradually develop missing patches, inconsistent users, unsafe permissions and different SSH, firewall or service configurations. Updating every server simultaneously can also interrupt the entire service.
 
 ### Scope
