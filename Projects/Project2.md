@@ -11,12 +11,20 @@
 
 Create a self-service factory that provisions short-lived student lab environments by environment name and owner. Terraform modules and workspaces isolate infrastructure, Ansible roles select the requested software profile, and Bash wrappers create, verify and destroy each environment safely.
 
+### Problem to Solve
+
+Creating development, testing and demonstration labs manually takes time and often leaves unused AWS resources running. Different users also need different software profiles, while each environment must remain isolated and easy to remove.
+
 ### Scope
 
 - Profiles: web (Nginx), php (Nginx + PHP-FPM) and devops (Docker + Compose)
 - Environments: dev, test and demo, each isolated through a Terraform workspace or separate state
 - Mandatory Owner, ExpiresAt, Profile and Environment tags
 - Maximum of three EC2 instances per environment; no ASG, ECS, EKS or Lambda
+
+### Expected Final Result
+
+A controlled lab factory in which a user selects an owner, environment and software profile, then automation creates an isolated and correctly tagged EC2 lab. Ansible installs the selected web, PHP or DevOps profile, verification confirms that it works, and the same workflow can report and safely destroy expired environments.
 
 ### Mandatory Rules
 

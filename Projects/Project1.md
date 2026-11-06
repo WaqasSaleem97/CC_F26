@@ -11,12 +11,20 @@
 
 Build a tag-driven AWS inventory and compliance dashboard. Terraform provisions a small monitored fleet and a dashboard server. AWS CLI queries and Bash scripts collect resource facts, Ansible configures the fleet, and Nginx publishes a read-only HTML compliance report.
 
+### Problem to Solve
+
+AWS administrators can have several EC2 instances but no single place to see what is running, whether the required tags are present, which ports are publicly exposed and whether the web services are healthy. Repeating these checks manually is slow, inconsistent and difficult to audit.
+
 ### Scope
 
 - One VPC, one public subnet, one dashboard EC2 instance and two managed EC2 instances
 - Required tags: Project, Environment, Owner and ManagedBy
 - Compliance checks for missing tags, unexpected public ports, instance state and Nginx health
 - No AWS Config, CloudWatch, Lambda, Python or third-party monitoring platform
+
+### Expected Final Result
+
+A working read-only Nginx dashboard that lists the project EC2 resources and displays their IDs, IP addresses, states, required tags, security checks and health status. The reports refresh automatically, show clear PASS/FAIL results and demonstrate that a controlled violation can be detected and remediated.
 
 ### Mandatory Rules
 

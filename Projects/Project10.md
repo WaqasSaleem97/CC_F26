@@ -11,12 +11,20 @@
 
 Create a defensive incident-response workspace for collecting Linux and Nginx evidence from two EC2 application servers. Terraform provisions an isolated lab, Ansible deploys read-only collection scripts, Bash creates timestamped and hashed evidence bundles, and a restricted Nginx portal presents sanitized incident summaries.
 
+### Problem to Solve
+
+During a Linux or web-service incident, administrators need useful evidence without unnecessarily changing the affected hosts or exposing sensitive raw data. The collection process must be repeatable and must prove that evidence was not modified.
+
 ### Scope
 
 - Two application EC2 instances and one evidence collector/portal instance
 - Collect system identity, users, processes, listening ports, disk/memory, login records, UFW status and selected Nginx logs
 - Use only defensive collection and safe configuration-drift simulations
 - No exploitation, credential collection, packet interception, malware tooling or external SIEM
+
+### Expected Final Result
+
+An isolated defensive incident workspace containing two application hosts and one collector/portal host. Read-only automation creates timestamped evidence bundles and SHA-256 manifests, records chain-of-custody information, publishes a restricted sanitized summary, applies an approved remediation and recollects evidence to demonstrate the before-and-after result.
 
 ### Mandatory Rules
 

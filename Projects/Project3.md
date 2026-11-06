@@ -11,12 +11,20 @@
 
 Deploy a private Gitea collaboration service on EC2. Terraform creates the network, compute, security groups and a private S3 backup bucket. Ansible installs Docker, deploys Gitea, places Nginx HTTPS in front of it, configures UFW and automates backup and restore validation.
 
+### Problem to Solve
+
+A team that hosts source code internally needs secure Git access, persistent repository data and dependable backups. Running a Git service without HTTPS or a tested recovery process creates both security and data-loss risks.
+
 ### Scope
 
 - One EC2 host for Gitea and Nginx; Docker Compose is required
 - Private S3 bucket for encrypted-at-rest backup objects with public access blocked
 - Self-signed TLS is permitted; HTTP must redirect to HTTPS
 - No RDS, managed load balancer, Route 53 or external backup product
+
+### Expected Final Result
+
+A private Gitea service running in Docker behind an Nginx HTTPS reverse proxy. Developers can clone, commit, push and pull repositories, application data persists across container restarts, backups are stored in a private S3 bucket and a documented restore test proves that the service can be recovered.
 
 ### Mandatory Rules
 

@@ -11,12 +11,20 @@
 
 Implement a controlled IAM onboarding, role-change and offboarding workflow driven by a reviewed CSV file. Terraform creates groups, users, memberships and approved policy attachments. Bash validates requests, an S3 backend protects shared state, and Ansible publishes a sanitized audit dashboard.
 
+### Problem to Solve
+
+Manual AWS IAM onboarding and offboarding can leave users in incorrect groups, retain access after they leave or create credentials that are handled insecurely. Access changes therefore need validation, review and a reproducible record.
+
 ### Scope
 
 - Groups: CloudAdmins, Developers and Auditors with documented AWS-managed policies
 - CSV-driven users using csvdecode; no plaintext password or access key may be committed
 - Joiner, mover and leaver changes must occur through branches and pull requests
 - No AWS Organizations, Identity Center, Lambda or custom web application
+
+### Expected Final Result
+
+A reviewed joiner-mover-leaver workflow driven by a validated CSV file and Terraform. Approved changes create, update or remove IAM users and memberships, Terraform state remains in private S3 storage, and a sanitized dashboard shows the resulting access without exposing passwords, keys or other credentials.
 
 ### Mandatory Rules
 

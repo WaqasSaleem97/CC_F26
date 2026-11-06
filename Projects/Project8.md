@@ -11,12 +11,20 @@
 
 Build a single Nginx HTTPS gateway in front of three different applications: a static Nginx site, an Apache/HTTPD site and a PHP-FPM site. Terraform provisions the hosts; Ansible configures path-based proxying, self-signed certificates, certificate-expiry checks and safe automated rotation.
 
+### Problem to Solve
+
+Several web applications may need to share one secure public entry point while their backend servers remain protected. HTTPS certificates also expire and must be checked and replaced without breaking the gateway.
+
 ### Scope
 
 - One public gateway and three private-style backend roles within the course network design
 - Routes: /static/, /apache/ and /php/
 - Self-signed certificates generated and rotated by Ansible
 - No ACM, Route 53, external CA automation, managed load balancer or Kubernetes
+
+### Expected Final Result
+
+One Nginx HTTPS gateway that routes `/static/`, `/apache/` and `/php/` requests to three correctly configured backend roles. Direct backend exposure is restricted, HTTP redirects to HTTPS, and Ansible checks certificate expiry, performs a safe rotation and reloads Nginx only after configuration validation succeeds.
 
 ### Mandatory Rules
 

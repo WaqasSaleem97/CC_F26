@@ -11,12 +11,20 @@
 
 Design a recoverable Nginx web service using Terraform, Ansible, a private S3 backup bucket and scripted restore validation. Students deploy a primary environment, back up application/configuration data, destroy the compute tier, rebuild it and prove recovery against documented RTO and RPO targets.
 
+### Problem to Solve
+
+Keeping a backup does not guarantee recovery after servers are lost. The organization must prove that infrastructure can be recreated, the correct archive can be restored and the recovered service meets documented recovery objectives.
+
 ### Scope
 
 - One Nginx gateway and two backend EC2 instances
 - Private S3 bucket for versioned backup archives; Terraform state must be handled separately
 - Back up application content and course-scope configuration, not full machine images
 - No RDS, AWS Backup, AMI automation, cross-region replication or managed load balancer
+
+### Expected Final Result
+
+A complete disaster-recovery demonstration: deploy the web service, back up application content and configuration with a SHA-256 manifest to private versioned S3 storage, destroy the compute tier, rebuild it with Terraform, restore it with Ansible and Bash, and verify the recovered application version, integrity, RTO and RPO evidence.
 
 ### Mandatory Rules
 

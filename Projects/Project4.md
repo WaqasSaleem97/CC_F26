@@ -11,12 +11,20 @@
 
 Create a tag-controlled lifecycle manager that starts, stops and reports on non-production EC2 instances according to an office-hours schedule. Terraform provisions the managed instances and tags, AWS CLI performs lifecycle actions, and Bash plus cron provide safe scheduling, logging and dry-run behavior.
 
+### Problem to Solve
+
+Development and testing EC2 instances often remain powered on outside working hours and create unnecessary cost. Manual start and stop operations are repetitive and can accidentally affect production resources.
+
 ### Scope
 
 - Three non-production EC2 instances with Schedule and Environment tags
 - Controller runs from the course Ubuntu server or Codespace with configured AWS CLI
 - Start/stop actions must use tag filters and explicit dry-run/list modes
 - No Lambda, EventBridge, Systems Manager, billing API or third-party scheduler
+
+### Expected Final Result
+
+A tag-controlled lifecycle manager that lists, starts and stops only approved non-production instances. It supports safe list and dry-run modes, runs on a documented cron schedule, explicitly excludes production and records every attempted action and resulting state in an audit log.
 
 ### Mandatory Rules
 

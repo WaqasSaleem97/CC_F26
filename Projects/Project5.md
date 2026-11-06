@@ -11,12 +11,20 @@
 
 Implement a canary deployment workflow using an Nginx load balancer, stable backend servers and one canary backend. Terraform provisions the infrastructure; Ansible deploys versions, adjusts Nginx weights, performs smoke checks and rolls back when validation fails.
 
+### Problem to Solve
+
+Deploying a new application version to every user at once can turn one defect into a complete outage. The team needs a way to expose a small amount of traffic to the new version, test it and reverse the change quickly when validation fails.
+
 ### Scope
 
 - One Nginx load-balancer EC2 instance, two stable backends and one canary backend
 - Weighted upstream routing such as stable weight 9 and canary weight 1
 - Application may be static HTML or a simple PHP page with visible version identity
 - No ALB, ASG, containers, Kubernetes or external deployment platform
+
+### Expected Final Result
+
+An Nginx weighted-routing platform with stable backends and one canary backend. Automation deploys the new version to the canary, sends it a small traffic share, runs smoke checks and then either promotes the version or rolls traffic back to the stable service, with evidence of both successful and failed scenarios.
 
 ### Mandatory Rules
 

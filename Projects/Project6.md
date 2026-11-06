@@ -11,12 +11,20 @@
 
 Build an Ansible-managed Linux fleet with controlled patching, account and permission baselines, SSH/UFW controls, service verification and compliance reporting. Terraform provides the EC2 fleet; Ansible applies changes serially and remediates intentional drift.
 
+### Problem to Solve
+
+A Linux server fleet can gradually develop missing patches, inconsistent users, unsafe permissions and different SSH, firewall or service configurations. Updating every server simultaneously can also interrupt the entire service.
+
 ### Scope
 
 - Four Ubuntu EC2 instances divided into web and utility groups
 - Course-scope controls: users/groups, file modes, SSH key login, UFW, packages and Nginx
 - Serial patching with health checks between hosts
 - No Systems Manager, commercial scanner, CIS automation framework or external SIEM
+
+### Expected Final Result
+
+A four-host Ansible-managed fleet divided into web and utility groups. Reusable roles apply the baseline, patch one host at a time, run health checks between hosts, publish a per-host compliance report and detect and repair an intentionally introduced configuration drift.
 
 ### Mandatory Rules
 
