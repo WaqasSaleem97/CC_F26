@@ -79,27 +79,25 @@ Keep every original evidence screenshot inside `Labs/Lab04/screenshots/`. The `w
 
 ## Screenshot Rules
 
-1. Save every screenshot inside `Labs/Lab04/screenshots/`.
-2. Use the exact filename and capitalization specified for each step.
-3. Every terminal screenshot must clearly show:
-   - the active terminal prompt;
-   - the required command; and
-   - the relevant result or output.
-
-   For normal tasks, the prompt must show `<github-username>@ubuntu`. After switching users in Task 6, it must show `lab4user@ubuntu` where applicable.
-4. The GitHub username comparison is case-insensitive, but the spelling must match the username registered in the Student Marks Portal.
-5. GUI screenshots must clearly show the requested VMware setting or result.
-6. Screenshots must be clear, readable, and created from your own work.
-7. Do not crop out required identity, commands, filenames, or results.
-8. Do not expose passwords, private keys, access tokens, recovery codes, or other credentials.
-9. Do not copy, reuse, or modify another student's screenshots.
-10. Commit and push the complete `Labs/Lab04` directory before the deadline.
+1. Save every required screenshot inside `Labs/Lab04/screenshots/`.
+2. Use the exact filename and capitalization specified for its step.
+3. Every terminal screenshot must show the active prompt, required command, and relevant output.
+4. For normal VM tasks, terminal evidence must show `<github-username>@ubuntu`. After the required user switch in Task 6 or an exam scenario, show the actual `lab4user@ubuntu` account and retain the transition command in the evidence.
+5. GitHub username comparison is case-insensitive, but its spelling must match the Student Marks Portal registration.
+6. GUI screenshots must clearly show the requested application, setting, account, or result. Instructor reference images are not submission evidence.
+7. Where a step groups commands into one screenshot, capture all of those commands and outputs together. Where evidence is explicitly optional or conditional, follow that condition.
+8. Screenshots must be readable, unedited evidence from your own work. Do not crop away required identity, commands, filenames, or results. Tile windows before taking a screenshot when a combined view is requested.
+9. Do not expose real passwords, password hashes, private keys, access tokens, recovery codes, or payment details. Supplied training-only example values may appear where the task requires them.
+10. Do not copy, reuse, or modify another student's screenshots.
+11. Commit and push the complete `Labs/Lab04` directory before the deadline.
 
 Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
 
 ### Required Screenshot Filenames
 
-These are the 38 always-required guided-task screenshot filenames. Save them inside `Labs/Lab04/screenshots/` using the exact names below. Any conditional, alternative, bonus, and exam-evaluation lists that follow also apply as described.
+These are the 38 required Lab 4 guided-task screenshot filenames. Save them inside `Labs/Lab04/screenshots/` using the exact names below:
+
+Conditional, alternative, and bonus evidence is listed separately below; follow the conditions given in each task.
 
 ```text
 vm_settings.png
@@ -164,7 +162,7 @@ run_demo_output_sudo.png
 
 ### Exam Evaluation Screenshot Filenames
 
-Follow the existing exam questions and their marking notes for these filenames:
+The existing exam evaluation questions use these 23 filenames. Follow those questions below and save their evidence in the same `screenshots/` directory:
 
 ```text
 Q1_remote_connection.png

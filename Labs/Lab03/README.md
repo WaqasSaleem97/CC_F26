@@ -48,6 +48,7 @@ By the end of this lab, you will be able to:
 **Navigation:** Click any task below to jump to its instructions.
 ## 📋 Task List
 
+- [Screenshot Rules](#screenshot-rules)
 - [Required Screenshot Filenames](#required-screenshot-filenames)
 - [Task 1: Handling Local and Remote Commit Conflicts (Pull vs Pull --rebase)](#task-1--handling-local-and-remote-commit-conflicts-pull-vs-pull---rebase)
 - [Task 2: Creating and Resolving Merge Conflicts Manually](#task-2--creating-and-resolving-merge-conflicts-manually)
@@ -66,11 +67,25 @@ By the end of this lab, you will be able to:
 
 ---
 
-## Screenshots Required
+## Screenshot Rules
+
+1. Save every required screenshot inside `Labs/Lab03/screenshots/`.
+2. Use the exact filename and capitalization specified for its step.
+3. Every terminal screenshot must show the active prompt, required command, and relevant output.
+4. Ubuntu terminal evidence must show `<github-username>@ubuntu` for normal server work. In the Task 10 Codespace, show its actual terminal account/hostname and your fork owner. GitHub and portfolio screenshots must show the requested page and result.
+5. GitHub username comparison is case-insensitive, but its spelling must match the Student Marks Portal registration.
+6. GUI screenshots must clearly show the requested application, setting, account, or result. Instructor reference images are not submission evidence.
+7. Where a step groups commands into one screenshot, capture all of those commands and outputs together. Where evidence is explicitly optional or conditional, follow that condition.
+8. Screenshots must be readable, unedited evidence from your own work. Do not crop away required identity, commands, filenames, or results. Tile windows before taking a screenshot when a combined view is requested.
+9. Do not expose real passwords, password hashes, private keys, access tokens, recovery codes, or payment details. Supplied training-only example values may appear where the task requires them.
+10. Do not copy, reuse, or modify another student's screenshots.
+11. Commit and push the complete `Labs/Lab03` directory before the deadline.
+
+Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
 
 ### Required Screenshot Filenames
 
-These are the 63 always-required guided-task screenshot filenames. Save them inside `Labs/Lab03/screenshots/` using the exact names below. Any conditional, alternative, bonus, and exam-evaluation lists that follow also apply as described.
+These are the 63 required Lab 3 guided-task screenshot filenames. Save them inside `Labs/Lab03/screenshots/` using the exact names below:
 
 ```text
 remote_edit.png
@@ -140,7 +155,7 @@ live_site.png
 
 ### Exam Evaluation Screenshot Filenames
 
-Follow the existing exam questions and their marking notes for these filenames:
+The existing exam evaluation questions use these 23 filenames. Follow those questions below and save their evidence in the same `screenshots/` directory:
 
 ```text
 Q1_remote_edit.png

@@ -27,6 +27,7 @@ CC/
 
 ## Task List
 
+- [Screenshot Rules](#screenshot-rules)
 - [Required Screenshot Filenames](#required-screenshot-filenames)
 - [Getting Started](#getting-started)
 - [Task 1: Create Private GitHub Repository](#task-1-create-private-github-repository)
@@ -47,46 +48,25 @@ CC/
 
 ---
 
-## Mandatory Screenshot and Autograding Rules
+## Screenshot Rules
 
-Read these rules before starting. The automated grader awards marks separately for each required screenshot.
+1. Save every required screenshot inside `Labs/Lab02/screenshots/`.
+2. Use the exact filename and capitalization specified for its step.
+3. Every terminal screenshot must show the active prompt, required command, and relevant output.
+4. Ubuntu terminal evidence must show `<github-username>@ubuntu` for your registered account. For GitHub web-interface and Windows-client tasks, use a split-screen view that also shows the Ubuntu terminal identity, together with the requested operation and result.
+5. GitHub username comparison is case-insensitive, but its spelling must match the Student Marks Portal registration.
+6. GUI screenshots must clearly show the requested application, setting, account, or result. Instructor reference images are not submission evidence.
+7. Where a step groups commands into one screenshot, capture all of those commands and outputs together. Where evidence is explicitly optional or conditional, follow that condition.
+8. Screenshots must be readable, unedited evidence from your own work. Do not crop away required identity, commands, filenames, or results. Tile windows before taking a screenshot when a combined view is requested.
+9. Do not expose real passwords, password hashes, private keys, access tokens, recovery codes, or payment details. Supplied training-only example values may appear where the task requires them.
+10. Do not copy, reuse, or modify another student's screenshots.
+11. Commit and push the complete `Labs/Lab02` directory before the deadline.
 
-1. Before doing this lab, use an Ubuntu account whose terminal prompt shows your registered GitHub username before `@` and `ubuntu` as the hostname:
-
-   ```text
-   YourGitHubUsername@ubuntu:~$
-   ```
-
-   The comparison is case-insensitive, but spelling must match the `user_name` registered in the Student Marks Portal.
-
-2. Every screenshot must clearly show:
-   - `YourGitHubUsername@ubuntu` in the terminal prompt;
-   - the command or GitHub operation required by that task; and
-   - the relevant result or output.
-
-3. For GitHub web-interface tasks, use a split-screen view so the GitHub page and a terminal showing `YourGitHubUsername@ubuntu` are visible in the same screenshot.
-
-4. Save every screenshot inside:
-
-   ```text
-   Labs/Lab02/screenshots/
-   ```
-
-5. Use the exact filename and capitalization given in this document. Do not rename files, add numbers, or use alternative spellings.
-
-6. Screenshots must be readable by OCR. A missing, unclear, cropped, or unreadable screenshot receives zero for that check.
-
-7. The required command and its relevant output must be visible. A screenshot containing only the command or only unrelated output may receive zero.
-
-8. Exact and visually near-duplicate screenshots are compared across students for the same task. If two students submit the same or slightly modified screenshot, both receive zero for that task.
-
-9. Do not expose passwords, private SSH keys, access tokens, recovery codes, or other secrets. It is acceptable to show a public-key entry or fingerprint without revealing private key contents.
-
-10. Commit and push the complete `Labs/Lab02` directory to `CC` before the deadline. Files remaining only on your computer cannot be graded.
+Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
 
 ### Required Screenshot Filenames
 
-The current Lab 2 grader checks these 37 files:
+These are the 37 required Lab 2 guided-task screenshot filenames. Save them inside `Labs/Lab02/screenshots/` using the exact names below:
 
 ```text
 git_installation.png
@@ -128,6 +108,12 @@ remote_branch_deleted.png
 remote_branch_delete_cmd.png
 ```
 
+The current Lab 2 grader checks these 37 files. The automated grader awards marks separately for each required screenshot. Spelling must match the `user_name` registered in the Student Marks Portal.
+
+Screenshots must be readable by OCR. A missing, unclear, cropped, or unreadable screenshot receives zero for that check.
+
+Exact and visually near-duplicate screenshots are compared across students for the same task. If two students submit the same or slightly modified screenshot, both receive zero for that task.
+
 Each of these 37 checks has equal weight. Bonus and additional exam-practice screenshots may be reviewed separately and are not included in these 37 automated checks.
 
 ### Bonus Task Screenshot Filenames
@@ -141,7 +127,7 @@ collab_merge.png
 
 ### Exam Evaluation Screenshot Filenames
 
-Follow the existing exam questions and their marking notes for these filenames:
+The existing exam evaluation questions use these 16 filenames. Follow those questions below and save their evidence in the same `screenshots/` directory:
 
 ```text
 Q1_merge_history.png
@@ -161,6 +147,8 @@ Q3_merge_conflict.png
 Q3_conflict_resolved.png
 Q3_final_file.png
 ```
+
+The existing marking notes in the Exam Evaluation Questions section continue to apply.
 
 ---
 

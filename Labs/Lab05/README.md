@@ -84,18 +84,15 @@ Keep every original evidence screenshot inside `Labs/Lab05/screenshots/`. The fi
 
 ## Screenshot Rules
 
-1. Save every screenshot inside `Labs/Lab05/screenshots/`.
-2. Use the exact filename and capitalization specified for each step.
-3. Every terminal screenshot must clearly show:
-   - the active terminal prompt;
-   - the required command; and
-   - the relevant result or output.
-4. The terminal prompt must show `<github-username>@ubuntu`. The GitHub username comparison is case-insensitive, but its spelling must match the username registered in the Student Marks Portal.
-5. GUI screenshots must clearly show the requested application, setting, login screen, or result.
-6. Where a task explicitly provides two evidence alternatives, submit only one of the listed alternatives.
-7. Screenshots must be clear, readable, and created from your own work.
-8. Do not crop out required identity, commands, filenames, or results.
-9. Do not expose passwords, private keys, access tokens, recovery codes, or other credentials.
+1. Save every required screenshot inside `Labs/Lab05/screenshots/`.
+2. Use the exact filename and capitalization specified for its step.
+3. Every terminal screenshot must show the active prompt, required command, and relevant output.
+4. Ubuntu terminal evidence must show `<github-username>@ubuntu` for your normal account. GUI screenshots must show the requested application, setting, login screen, or result; use the VM console or remote desktop as specified by the task.
+5. GitHub username comparison is case-insensitive, but its spelling must match the Student Marks Portal registration.
+6. GUI screenshots must clearly show the requested application, setting, account, or result. Instructor reference images are not submission evidence.
+7. Where a step groups commands into one screenshot, capture all of those commands and outputs together. Where evidence is explicitly optional or conditional, follow that condition.
+8. Screenshots must be readable, unedited evidence from your own work. Do not crop away required identity, commands, filenames, or results. Tile windows before taking a screenshot when a combined view is requested.
+9. Do not expose real passwords, password hashes, private keys, access tokens, recovery codes, or payment details. Supplied training-only example values may appear where the task requires them.
 10. Do not copy, reuse, or modify another student's screenshots.
 11. Commit and push the complete `Labs/Lab05` directory before the deadline.
 
@@ -103,7 +100,9 @@ Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may r
 
 ### Required Screenshot Filenames
 
-These are the 67 always-required guided-task screenshot filenames. Save them inside `Labs/Lab05/screenshots/` using the exact names below. Any conditional, alternative, bonus, and exam-evaluation lists that follow also apply as described.
+These are the 67 required Lab 5 guided-task screenshot filenames. Save them inside `Labs/Lab05/screenshots/` using the exact names below:
+
+Conditional, alternative, and bonus evidence is listed separately below; follow the conditions given in each task.
 
 ```text
 task1_java_suggestion.png
@@ -188,7 +187,7 @@ Submit **one screenshot from each pair**, as specified in Task 8:
 
 ### Exam Evaluation Screenshot Filenames
 
-Follow the existing exam questions and their marking notes for these filenames:
+The existing exam evaluation questions use these 2 filenames. Follow those questions below and save their evidence in the same `screenshots/` directory:
 
 ```text
 exam_docker_environment_check.png

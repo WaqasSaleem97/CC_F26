@@ -53,6 +53,7 @@ Follow these rules:
 
 ## Task List
 
+- [Screenshot Rules](#screenshot-rules)
 - [Required Screenshot Filenames](#required-screenshot-filenames)
 - [Getting Started](#getting-started)
 - [Task 1: Create and Configure Your GitHub Account](#task-1-create-and-configure-your-github-account)
@@ -75,11 +76,25 @@ Follow these rules:
 - [Task 18: Prepare Lab1 Solution PDF](#task-18-prepare-lab1-solution-pdf)
 - [Final Submission Checklist](#final-submission-checklist)
 
-## Screenshots Required
+## Screenshot Rules
+
+1. Save every required screenshot inside `Labs/Lab01/screenshots/`.
+2. Use the exact filename and capitalization specified for its step.
+3. Every terminal screenshot must show the active prompt, required command, and relevant output.
+4. After the Ubuntu installation is complete, terminal evidence must show `<github-username>@ubuntu` for your normal account. Before installation, capture the requested GitHub, portal, VMware, Ubuntu installer, or Windows screen; a terminal identity is required only where the task asks for it.
+5. GitHub username comparison is case-insensitive, but its spelling must match the Student Marks Portal registration.
+6. GUI screenshots must clearly show the requested application, setting, account, or result. Instructor reference images are not submission evidence.
+7. Where a step groups commands into one screenshot, capture all of those commands and outputs together. Where evidence is explicitly optional or conditional, follow that condition.
+8. Screenshots must be readable, unedited evidence from your own work. Do not crop away required identity, commands, filenames, or results. Tile windows before taking a screenshot when a combined view is requested.
+9. Do not expose real passwords, password hashes, private keys, access tokens, recovery codes, or payment details. Supplied training-only example values may appear where the task requires them.
+10. Do not copy, reuse, or modify another student's screenshots.
+11. Commit and push the complete `Labs/Lab01` directory before the deadline.
+
+Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
 
 ### Required Screenshot Filenames
 
-These are the 44 always-required guided-task screenshot filenames. Save them inside `Labs/Lab01/screenshots/` using the exact names below. Any conditional, alternative, bonus, and exam-evaluation lists that follow also apply as described.
+These are the 44 required Lab 1 guided-task screenshot filenames. Save them inside `Labs/Lab01/screenshots/` using the exact names below:
 
 ```text
 lab01_folder_structure.png
@@ -616,21 +631,6 @@ sudo systemctl enable --now ssh
 
 - `solution_title_page.png`
 - `lab1_solution_pdf.png`
-
-## Screenshot Rules
-
-- Every screenshot must be created from your own work.
-- Save every screenshot inside `Labs/Lab01/screenshots/`.
-- Use the exact filename written after each step.
-- Screenshots must be clear and readable.
-- Show the relevant window, command, output, or identity information.
-- Do not crop out the terminal prompt when it is required.
-- Do not edit a screenshot to add, remove, or replace evidence.
-- Do not copy or reuse another student's screenshots.
-- Do not expose passwords, access tokens, recovery codes, or private keys.
-- The instructional images inside `images/install-ubuntu-server/` are examples and must not be submitted as your own evidence.
-
-Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected task.
 
 ## Final Submission Checklist
 
