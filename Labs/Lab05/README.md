@@ -61,6 +61,7 @@ Keep every original evidence screenshot inside `Labs/Lab05/screenshots/`. The fi
 ## Task List
 
 - [Screenshot Rules](#screenshot-rules)
+- [Required Screenshot Filenames](#required-screenshot-filenames)
 - [Getting Started](#getting-started)
 - [Task 1: Discover a Missing Command and Install Java Using apt](#task-1-discover-a-missing-command-and-install-java-using-apt)
 - [Task 2: Install and Remove Java Using apt-get](#task-2-install-and-remove-java-using-apt-get)
@@ -99,6 +100,100 @@ Keep every original evidence screenshot inside `Labs/Lab05/screenshots/`. The fi
 11. Commit and push the complete `Labs/Lab05` directory before the deadline.
 
 Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
+
+### Required Screenshot Filenames
+
+These are the 67 always-required guided-task screenshot filenames. Save them inside `Labs/Lab05/screenshots/` using the exact names below. Any conditional, alternative, bonus, and exam-evaluation lists that follow also apply as described.
+
+```text
+task1_java_suggestion.png
+task1_java_install.png
+task1_java_version.png
+task1_java_remove.png
+task1_java_not_found.png
+task1_hash_clear.png
+task2_aptget_install.png
+task2_java_version_after_aptget.png
+task2_aptget_remove.png
+task2_hash_after_remove.png
+task3_apt_update.png
+task3_apt_upgrade.png
+task3_explanation.png
+task4_snap_install.png
+task4_snap_list.png
+task4_code_version_or_info.png
+task4_snap_bin_location.png
+task5_update.png
+task5_xfce_install.png
+task5_xrdp_enable.png
+task5_xrdp_status.png
+task5_xsession.png
+task5_rdp_connect.png
+task5_vscode_launch.png
+task6_lightdm_install.png
+task6_lightdm_config.png
+task6_lightdm_cleanup.png
+task6_lightdm_restart.png
+task6_gui_enable_boot.png
+task6_after_reboot_gui.png
+task6_gui_disable_boot.png
+task6_after_reboot_cli.png
+task6_gui_start.png
+task6_vscode_launch.png
+task6_gui_stop.png
+task7_install_chrome_error.png
+task7_ls_sources_list_d.png
+task7_prerequisites.png
+task7_add_key.png
+task7_create_google_chrome_list.png
+task7_verify_source.png
+task7_apt_update.png
+task7_install_chrome.png
+task7_chrome_version.png
+task8_add_ppa_audacity.png
+task8_apt_update_audacity.png
+task8_install_audacity.png
+task8_add_ppa_obs.png
+task8_apt_update_obs.png
+task8_install_obs.png
+task9_vim_check.png
+task9_mkdir_cd.png
+task9_vim_edit.png
+task9_k8s_saved.png
+task10_verify_annotation.png
+task10_verify_entering_temp_data.png
+task10_verify_no_temp_comment.png
+task11_dd_delete_and_undo.png
+task11_delete3_and_undo.png
+task11_line1.png
+task11_navigation.png
+task12_search_nginx.png
+task12_n_and_N_navigation.png
+task12_added_occurrences.png
+task12_cycle_matches.png
+task12_substitute_result.png
+task12_undo_and_quit.png
+```
+
+### Conditional and Optional Screenshots
+
+- `task9_vim_install.png` — Required only if Vim installation was necessary in Task 9.
+
+### Alternative Screenshot Groups
+
+Submit **one screenshot from each pair**, as specified in Task 8:
+
+- `task8_audacity_launch.png` or `task8_audacity_version.png`
+- `task8_obs_launch.png` or `task8_obs_version.png`
+
+### Exam Evaluation Screenshot Filenames
+
+Follow the existing exam questions and their marking notes for these filenames:
+
+```text
+exam_docker_environment_check.png
+exam_docker_desktop_result.png
+```
 
 ## Getting Started
 
@@ -169,7 +264,7 @@ Use Ubuntu's missing-command suggestion to identify a Java package, install it w
 
    Save both commands and the result in `task1_hash_clear.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task1_java_suggestion.png`
 - `task1_java_install.png`
@@ -221,7 +316,7 @@ Repeat the Java package workflow with `apt-get`. Use the exact `<java-package>` 
 
    Save the result as `task2_hash_after_remove.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task2_aptget_install.png`
 - `task2_java_version_after_aptget.png`
@@ -266,7 +361,7 @@ Run both commands and explain their different purposes.
 
    Save the screenshot as `task3_explanation.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task3_apt_update.png`
 - `task3_apt_upgrade.png`
@@ -314,7 +409,7 @@ Install Visual Studio Code from Snap using the command line. Keep it installed f
 
 Do not remove Visual Studio Code.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task4_snap_install.png`
 - `task4_snap_list.png`
@@ -387,7 +482,7 @@ Install a lightweight desktop and enable remote access. Then connect from the ho
 
 8. Close Visual Studio Code and log out of the RDP session.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task5_update.png`
 - `task5_xfce_install.png`
@@ -497,7 +592,7 @@ Configure the LightDM greeter, test graphical and command-line boot targets, and
 
    Save the inactive result as `task6_gui_stop.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task6_lightdm_install.png`
 - `task6_lightdm_config.png`
@@ -595,7 +690,7 @@ Only obtain signing keys and repository information from the software vendor's o
 
    Save the result as `task7_chrome_version.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task7_install_chrome_error.png`
 - `task7_ls_sources_list_d.png`
@@ -680,7 +775,7 @@ Add PPAs for Audacity and OBS Studio, install the applications, and verify each 
    - launch OBS Studio in XFCE and save `task8_obs_launch.png`; or
    - run `obs --version` and save `task8_obs_version.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task8_add_ppa_audacity.png`
 - `task8_apt_update_audacity.png`
@@ -759,7 +854,7 @@ Confirm that Vim is available, create a Lab 05 working directory, and use Vim to
 
    Save the result as `task9_k8s_saved.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task9_vim_check.png`
 - `task9_vim_install.png` only if Vim was not already installed
@@ -815,7 +910,7 @@ Add a permanent annotation, then make and discard a temporary edit.
 
    Save the result as `task10_verify_no_temp_comment.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task10_verify_annotation.png`
 - `task10_verify_entering_temp_data.png`
@@ -846,7 +941,7 @@ Practice line deletion, undo, and cursor navigation without leaving unwanted cha
 
 6. Exit with `:q!` so that no accidental changes are saved.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task11_dd_delete_and_undo.png`
 - `task11_delete3_and_undo.png`
@@ -888,7 +983,7 @@ Search for text, move between matches, add more matches, substitute all matches,
 
 8. Type `:wq` and press Enter so the restored manifest remains saved.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `task12_search_nginx.png`
 - `task12_n_and_N_navigation.png`
@@ -919,7 +1014,7 @@ Without using commands or step-by-step guidance from this README:
 
 Your marks are based on a correct compatibility evaluation and honest evidence, not on forcing Docker Desktop to run in an unsupported nested VM.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 
 - `exam_docker_environment_check.png`
 - `exam_docker_desktop_result.png`

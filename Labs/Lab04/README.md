@@ -61,6 +61,7 @@ Keep every original evidence screenshot inside `Labs/Lab04/screenshots/`. The `w
 ## Task List
 
 - [Screenshot Rules](#screenshot-rules)
+- [Required Screenshot Filenames](#required-screenshot-filenames)
 - [Getting Started](#getting-started)
 - [Task 1: Verify VM Resources in VMware](#task-1-verify-vm-resources-in-vmware)
 - [Task 2: Start the VM and Connect by SSH](#task-2-start-the-vm-and-connect-by-ssh)
@@ -96,6 +97,101 @@ Keep every original evidence screenshot inside `Labs/Lab04/screenshots/`. The `w
 
 Missing, unclear, incorrectly named, misplaced, edited, or copied evidence may receive zero marks for the affected check.
 
+### Required Screenshot Filenames
+
+These are the 38 always-required guided-task screenshot filenames. Save them inside `Labs/Lab04/screenshots/` using the exact names below. Any conditional, alternative, bonus, and exam-evaluation lists that follow also apply as described.
+
+```text
+vm_settings.png
+whoami_pwd.png
+answers_md.png
+ls_root.png
+ls_bin.png
+ls_sbin.png
+ls_usr.png
+ls_opt.png
+ls_etc.png
+ls_dev.png
+ls_var.png
+ls_tmp.png
+home_ls.png
+mkdir_workspace.png
+cd_workspace.png
+pwd_workspace.png
+nano_readme.png
+nano_main.png
+nano_env.png
+workspace_ls.png
+cp_readme.png
+mv_readme.png
+rm_readme.png
+mkdir_java_app.png
+cp_recursive.png
+copy_verify.png
+history.png
+tab_completion.png
+uname.png
+cpuinfo.png
+meminfo.png
+diskinfo.png
+os-release.png
+processes.png
+adduser_lab4user.png
+lab4user_passwd.png
+su_lab4user.png
+exit_back.png
+```
+
+### Conditional and Optional Screenshots
+
+- `vm_login.png` — Include only if `whoami_pwd.png` does not show the successful SSH connection and remote prompt.
+- `sudo_whoami.png` — Optional Task 6 sudo-access test.
+- `deluser.png` — Optional Task 6 practice-account deletion.
+- `Q5_user_removed.png` — Optional account removal in Exam Evaluation Question 5.
+
+### Bonus Task Screenshot Filenames
+
+These files belong to the optional bonus task:
+
+```text
+nano_run_demo.png
+chmod_run_demo.png
+run_demo_output.png
+run_demo_output_sudo.png
+```
+
+`run_demo_output_sudo.png` is needed only if you perform the optional sudo run in the bonus task.
+
+### Exam Evaluation Screenshot Filenames
+
+Follow the existing exam questions and their marking notes for these filenames:
+
+```text
+Q1_remote_connection.png
+Q1_user_verification.png
+Q1_host_confirmation.png
+Q2_root_listing.png
+Q2_os_version.png
+Q2_directory_evidence.png
+Q2_hidden_files.png
+Q2_report_file.png
+Q3_workspace_created.png
+Q3_files_created.png
+Q3_backup_handling.png
+Q3_workspace_backup.png
+Q3_command_history.png
+Q3_autocomplete.png
+Q4_system_info.png
+Q4_resource_info.png
+Q4_process_list.png
+Q5_user_created.png
+Q5_user_verified.png
+Q5_user_login.png
+Q5_permission_denied.png
+Q5_switch_back.png
+Q5_authlog_analysis.png
+```
+
 ## Getting Started
 
 1. From the root of your local `CC` repository, create the screenshot directory:
@@ -124,7 +220,7 @@ Confirm the VM resources that were allocated in Lab 1.
 2. Inspect VM settings and note the following (no commands required for GUI): VM name, RAM, CPU, disk, and network adapter type.  
 3. Take a screenshot of the VM settings window showing RAM, CPU, disk and networking. Save screenshot as: `vm_settings.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 - `vm_settings.png`
 
 ---
@@ -152,7 +248,7 @@ pwd
 
 - Save a single screenshot that clearly shows both outputs as: `whoami_pwd.png`
 
-📸 Screenshot Required:
+**Screenshot Required:**
 - `vm_login.png` (optional if `whoami_pwd.png` provided)  
 - `whoami_pwd.png` (required; must show both `whoami` and `pwd` outputs)
 
@@ -232,7 +328,7 @@ nano ~/answers.md
 
 > Reminder: Do not upload the `.md` file—submit the screenshot `answers_md.png` as proof of your written answer.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 - `ls_root.png`  
 - `ls_bin.png`  
 - `ls_sbin.png`  
@@ -337,7 +433,7 @@ history
 
 - Demonstrate tab completion (type partial name and press Tab) and capture that action as `tab_completion.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 - `mkdir_workspace.png`  
 - `cd_workspace.png`  
 - `pwd_workspace.png`  
@@ -403,7 +499,7 @@ ps aux
 ```
 - Save screenshot as `processes.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 - `uname.png`  
 - `cpuinfo.png`  
 - `meminfo.png`  
@@ -460,7 +556,7 @@ sudo deluser --remove-home lab4user
 ```
 - If run, save screenshot as `deluser.png`.
 
-📸 Screenshot Required:
+**Screenshot Required:**
 - `adduser_lab4user.png`  
 - `lab4user_passwd.png`  
 - `su_lab4user.png`  
@@ -513,7 +609,9 @@ sudo ~/lab4/workspace/run-demo.sh
 ```
 - Save screenshot as `run_demo_output_sudo.png`.
 
-📸 Screenshot (Optional / Bonus) — Recommended if you complete this task:
+**Screenshot Required:**
+
+Optional / Bonus — Recommended if you complete this task:
 - `nano_run_demo.png`  
 - `chmod_run_demo.png`  
 - `run_demo_output.png`  
@@ -536,6 +634,12 @@ You are part of a SOC (Security Operations Center) investigating unauthorized ac
 3. Confirm you are connected to the correct host machine.  
    - Screenshot as `Q1_host_confirmation.png`
 
+**Screenshot Required:**
+
+- `Q1_remote_connection.png`
+- `Q1_user_verification.png`
+- `Q1_host_confirmation.png`
+
 ---
 
 ### 2. Filesystem Inspection for Forensic Evidence
@@ -554,6 +658,14 @@ The incident response team suspects malicious files in system directories. You m
    - Screenshot as `Q2_hidden_files.png`
 5. Create a markdown file summarizing your findings on key binary directories.  
    - Screenshot as `Q2_report_file.png`
+
+**Screenshot Required:**
+
+- `Q2_root_listing.png`
+- `Q2_os_version.png`
+- `Q2_directory_evidence.png`
+- `Q2_hidden_files.png`
+- `Q2_report_file.png`
 
 ---
 
@@ -576,6 +688,15 @@ You are creating a sandbox environment to safely analyze and handle suspicious f
 6. Demonstrate Linux auto-completion by typing a partial command or filename.  
    - Screenshot as `Q3_autocomplete.png`
 
+**Screenshot Required:**
+
+- `Q3_workspace_created.png`
+- `Q3_files_created.png`
+- `Q3_backup_handling.png`
+- `Q3_workspace_backup.png`
+- `Q3_command_history.png`
+- `Q3_autocomplete.png`
+
 ---
 
 ### 4. System Profiling and Process Monitoring
@@ -590,6 +711,12 @@ You are investigating a potential malware infection that is consuming excessive 
    - Screenshot as `Q4_resource_info.png`
 3. Display all active running processes to identify suspicious activity.  
    - Screenshot as `Q4_process_list.png`
+
+**Screenshot Required:**
+
+- `Q4_system_info.png`
+- `Q4_resource_info.png`
+- `Q4_process_list.png`
 
 ---
 
@@ -619,6 +746,16 @@ Your task is to simulate the account creation, perform privilege tests, and anal
 
 **Reminder:**  
 Take a screenshot after every step and name it as shown above. Include all screenshots in your submission for full credit.
+
+**Screenshot Required:**
+
+- `Q5_user_created.png`
+- `Q5_user_verified.png`
+- `Q5_user_login.png`
+- `Q5_permission_denied.png`
+- `Q5_switch_back.png`
+- `Q5_authlog_analysis.png`
+- `Q5_user_removed.png` (optional)
 
 ## Summary
 
