@@ -24,7 +24,9 @@ This directory contains ten project specifications based only on the concepts co
 - Use Terraform for graded infrastructure and Ansible/Bash for the required configuration and operations.
 - Do not commit credentials, private keys, Terraform state, real tfvars, passwords or generated secrets.
 - Capture all evidence before cleanup and destroy every project-owned AWS resource.
-- Submit the GitHub project-directory URL and the required PDF report.
+- Use your existing public GitHub repository named `CC`.
+- Store the assigned work under `CC/Projects/Project-<number>-<project-slug>/`.
+- Submit the direct URL of that project directory and the required PDF report.
 
 ## Standard Marks Distribution
 

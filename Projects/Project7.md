@@ -286,13 +286,13 @@ README.md and the PDF report must include:
 
 ### GitHub Repository
 
-Create or use your assigned course repository and submit the URL of:
+Use your existing public GitHub repository named `CC`. Store your assigned project in:
 
 ```text
-CC_<YourName>_<YourRollNumber>/Project-7-iam-lifecycle-automation/
+CC/Projects/Project-7-iam-lifecycle-automation/
 ```
 
-The repository must contain source files, example variables, documentation, screenshots and the final report. It must not contain credentials, private keys, state files or real tfvars.
+Submit the direct GitHub URL of this exact project directory. The repository must contain source files, example variables, documentation, screenshots and the final report. It must not contain credentials, private keys, state files or real tfvars.
 
 ### PDF Report
 
